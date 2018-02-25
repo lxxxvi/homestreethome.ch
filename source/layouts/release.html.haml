@@ -1,0 +1,9 @@
+= wrap_layout :layout do
+
+  - if current_article.previous_article
+    = link_to '<--', current_article.previous_article
+  = link_to 'Home', '/'
+  - if current_article.next_article
+    = link_to '-->', current_article.next_article
+  %article
+    = yield
