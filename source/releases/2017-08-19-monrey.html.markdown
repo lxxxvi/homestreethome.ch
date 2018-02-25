@@ -5,7 +5,21 @@ catalog_nr: HSH011
 ---
 
 # Monrey
-by Rob Chop The Vinylator
+by  
+Rob Chop The Vinylator
+
+## Playlist
+
+1. Beat no. 1
+2. Moment
+3. Ropes
+4. Recho (Scratches by DJ Okay)
+5. Streets
+6. Bar (Rap by Perf)
+7. R.bit
+8. Record Store
+9. Zeitgeist
 
 ## Links
-[Discogs](https://www.discogs.com/Rob-Chop-The-Vinylator-Monrey/release/10731589)
+
+* [Discogs](https://www.discogs.com/Rob-Chop-The-Vinylator-Monrey/release/10731589)
