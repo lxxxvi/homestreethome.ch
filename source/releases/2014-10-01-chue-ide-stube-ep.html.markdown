@@ -21,4 +21,5 @@ BOD
 
 ## Links
 
+* [Download .zip](https://cdn.homestreethome.ch/releases/hsh003/zip/hsh003.zip)
 * [Discogs](https://www.discogs.com/BOD-Chue-Ide-Stube-EP/release/6224255)

@@ -30,4 +30,5 @@ Tinu
 
 ## Links
 
+* [Download .zip](https://cdn.homestreethome.ch/releases/hsh006/zip/hsh006.zip)
 * [Discogs](https://www.discogs.com/Tinu-True-Fruits/release/7579828)

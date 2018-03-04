@@ -52,11 +52,15 @@ page "/feed.xml", layout: false
 # end
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def release_cover(catalog_nr)
+    image_path = "images/#{catalog_nr.downcase}/front.jpg"
+    source_image_path = "source/#{image_path}"
+    if File.exist?(source_image_path)
+      image_tag image_path
+    end
+  end
+end
 
 # Build-specific configuration
 configure :build do

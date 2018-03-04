@@ -18,3 +18,7 @@ Samplix
 6. never felt: nigga whut - redman
 7. need you: shut it down - frank-n-dank
 8. all new: rumble in the jungle - fugees
+
+## Links
+
+* [Download .zip](https://cdn.homestreethome.ch/releases/hsh009/zip/hsh009.zip)

@@ -32,4 +32,5 @@ Various Artists
 
 ## Links
 
+* [Download .zip](https://cdn.homestreethome.ch/releases/hsh002/zip/hsh002.zip)
 * [Discogs](https://www.discogs.com/Home-Street-Home-We-Be-To-Beat-What-Key-Be-To-Lock/release/5835903)

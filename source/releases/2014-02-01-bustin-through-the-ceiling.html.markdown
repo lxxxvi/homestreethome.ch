@@ -33,4 +33,5 @@ Various Artists
 
 ## Links
 
+* [Download .zip](https://cdn.homestreethome.ch/releases/hsh001/zip/hsh001.zip)
 * [Discogs](https://www.discogs.com/Home-Street-Home-Bustin-Through-The-Ceiling/release/5303073)

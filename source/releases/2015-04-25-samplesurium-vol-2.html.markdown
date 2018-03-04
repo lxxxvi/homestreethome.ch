@@ -27,4 +27,5 @@ Samplix
 
 ## Links
 
+* [Download .zip](https://cdn.homestreethome.ch/releases/hsh004/zip/hsh004.zip)
 * [Discogs](https://www.discogs.com/Samplix-Samplesurium-Vol2-/release/6969377)

@@ -24,4 +24,5 @@ Various Artists
 
 ## Links
 
+* [Download .zip](https://cdn.homestreethome.ch/releases/hsh010/zip/hsh010.zip)
 * [Discogs](https://www.discogs.com/Home-Street-Home-Beat-Diggers/release/10085181)

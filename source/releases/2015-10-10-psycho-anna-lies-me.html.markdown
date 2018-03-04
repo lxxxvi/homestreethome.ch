@@ -35,4 +35,5 @@ Various Artists
 
 Links
 
+* [Download .zip](https://cdn.homestreethome.ch/releases/hsh007/zip/hsh007.zip)
 * [Discogs](https://www.discogs.com/Home-Street-Home-Psycho-Anna-Lies-Me/release/7575933)
