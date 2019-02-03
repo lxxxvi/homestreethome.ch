@@ -1,5 +1,5 @@
 ---
-title: Eines Tages
+title: Eines Tages Instrumentals
 date: 2019-02-03
 catalog_nr: HSH013
 ---
