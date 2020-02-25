@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #fbc547;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+  padding: 5vh 1rem 10vh 1rem;
+  text-align: center; }
+
+#title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  word-spacing: 100vw;
+  background-color: #fab81f;
+  padding: 16px 0;
+  font-family: "serif"; }
+
+#main {
+  padding: 32px 0;
+  background-color: #fab81f; }
+
+a {
+  color: rgba(0, 0, 0, 0.7); }
+  a:focus, a:hover {
+    color: rgba(0, 0, 0, 0.6); }
+
+ol {
+  list-style-position: inside;
+  padding-left: 0; }
+
+ul {
+  list-style-type: none; }
+
+.middleman-logo {
+  margin-bottom: 1rem;
+  width: 10rem; }
+
+h1 {
+  margin-top: 32px; }
+
+h2 {
+  margin-top: 16px;
+  margin-bottom: 16px; }
+
+nav {
+  font-size: 1.4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; }
+  nav a {
+    padding: 16px 0;
+    text-decoration: none; }
+  nav a:hover {
+    background-color: #fabd2e; }
+
+.release-cover img {
+  padding: 32px 0;
+  width: 150px;
+  height: 150px; }
