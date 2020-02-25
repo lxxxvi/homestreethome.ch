@@ -51,4 +51,5 @@ Various Artists
 
 ## Links
 
+* [Download Zip](https://cdn.homestreethome.ch/releases/hsh014/zip/hsh014.zip)
 * [Discogs](https://www.discogs.com/Home-Street-Home-Rumbled-Raincoat-Rumbled-Face/release/13776867)
