@@ -11,11 +11,11 @@ Various Artists
 ## Playlist
 
 1. MFK-One - Follow Your Heart
-2. Boris Dave - Barabara
-3. Rob Chop The Vinylator - A Poem By Muna Abdulahi
-4. slik nik - Battle Cat
-5. ill Figure - Night Lies
-6. DJ Okay - Rick Ross II Blow Money Fast (DJ Okay Remix)
+2. Rob Chop The Vinylator - A Poem By Muna Abdulahi
+3. slik nik - Battle Cat
+4. ill Figure - Night Lies
+5. DJ Okay - Rick Ross II Blow Money Fast (DJ Okay Remix)
+6. Chuk'n'Dave - Jam us de Chapsle 2
 
 ## Links
 
