@@ -14,7 +14,7 @@ Various Artists
 2. Rob Chop The Vinylator - Oomish
 3. Geil Dave - Surprised
 4. DJ Okay - MentalHaze Loom
-5. slik nik- Changed The Beat (with MF Doom)
+5. slik nik - Changed The Beat (with MF Doom)
 6. Chuk Borris - Uvala
 7. Geil Dave - EarRugs
 8. Rob Chop The Vinylator - that drive to the woods to bury the body shit
