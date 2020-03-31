@@ -1,0 +1,35 @@
+%h1 Releases
+
+%table
+  %thead
+    %tr
+      %th Cat#
+      %th Artist
+      %th Name
+      %th Released on
+      %th Download URL
+      %th Discogs URL
+      %th Bandcamp URL
+      %th Published
+      %th
+      %th
+      %th
+
+  %tbody
+    - @releases.each do |release|
+      %tr
+        %td= release.catalog_number
+        %td= release.artist
+        %td= release.name
+        %td= release.released_on
+        %td= release.download_url
+        %td= release.discogs_url
+        %td= release.bandcamp_url
+        %td= release.published_at.present? ? 'Y' : 'N'
+        %td= link_to 'Preview', [:admin, release]
+        %td= link_to 'Edit', edit_admin_release_path(release)
+        %td= link_to 'Destroy', [:admin, release], method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Release', new_admin_release_path

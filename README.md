@@ -1,26 +1,24 @@
-# homestreethome.ch
+# README
 
-Middleman project for homestreethome.ch
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-## Installation
+Things you may want to cover:
 
-```shell
-git clone git@github.com:lxxxvi/homestreethome.ch.git
-cd homestreethome.ch
-bundle install
-```
+* Ruby version
 
-## Run locally
+* System dependencies
 
-```shell
-middleman server
-```
+* Configuration
 
-Then open `http://localhost:4567/` in your browser.
+* Database creation
 
-## Build & Deploy
+* Database initialization
 
-```shell
-bundle exec middleman build
-bundle exec middleman deploy
-```
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...

@@ -1,0 +1,36 @@
+%p#notice= notice
+
+%p
+  %b Catalog Number:
+  = @release.catalog_number
+%p
+  %b Artist:
+  = @release.artist
+%p
+  %b Name:
+  = @release.name
+%p
+  %b Released on:
+  = @release.released_on
+%p
+  %b Playlist:
+  = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true).render(@release.playlist).html_safe
+%p
+  %b Credits:
+  = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true).render(@release.credits).html_safe
+%p
+  %b Download URL:
+  = @release.download_url
+%p
+  %b Discogs URL:
+  = @release.discogs_url
+%p
+  %b Discogs URL:
+  = @release.bandcamp_url
+%p
+  %b Published:
+  = @release.published_at.present? ? 'Y' : 'N'
+
+= link_to 'Edit', edit_admin_release_path(@release)
+\|
+= link_to 'Back', admin_releases_path
