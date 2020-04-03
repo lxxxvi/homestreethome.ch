@@ -14,10 +14,10 @@
   = @release.released_on
 %p
   %b Playlist:
-  = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true).render(@release.playlist).html_safe
+  = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true).render(@release.playlist || '').html_safe
 %p
   %b Credits:
-  = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true).render(@release.credits).html_safe
+  = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true).render(@release.credits || '').html_safe
 %p
   %b Download URL:
   = @release.download_url

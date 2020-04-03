@@ -16,7 +16,7 @@
     = f.text_field :name
   .field
     = f.label :released_on
-    = f.date_select :released_on
+    = f.date_field :released_on
   .field
     = f.label :playlist
     = f.text_area :playlist
@@ -24,17 +24,17 @@
     = f.label :credits
     = f.text_area :credits
   .field
-    = f.label :download_url
+    = f.label :download_url, 'Download URL'
     = f.text_field :download_url
   .field
-    = f.label :discogs_url
+    = f.label :discogs_url, 'Discogs URL'
     = f.text_field :discogs_url
   .field
-    = f.label :bandcamp_url
+    = f.label :bandcamp_url, 'Bandcamp URL'
     = f.text_field :bandcamp_url
   .field
-    = f.label :published_at
+    = f.label :published_at, 'Published?'
     = f.check_box :published_at
 
   .actions
-    = f.submit 'Save'
+    = f.submit

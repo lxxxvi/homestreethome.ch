@@ -1,4 +1,4 @@
-class Admin::ReleasesController < ApplicationController
+class Admin::ReleasesController < Admin::BaseController
   before_action :set_release, only: [:show, :edit, :update, :destroy]
 
   def index

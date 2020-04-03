@@ -2,47 +2,72 @@ require 'test_helper'
 
 class ReleasesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @release = releases(:one)
+    @release = releases(:bustin)
   end
 
   test "should get index" do
-    get releases_url
+    sign_in
+    get admin_releases_path
     assert_response :success
   end
 
   test "should get new" do
-    get new_release_url
+    sign_in
+    get new_admin_release_path
     assert_response :success
   end
 
   test "should create release" do
+    sign_in
     assert_difference('Release.count') do
-      post releases_url, params: { release: { artist: @release.artist, credits: @release.credits, discogs_url: @release.discogs_url, download_url: @release.download_url, name: @release.name, playlist: @release.playlist, released_on: @release.released_on } }
+      post admin_releases_path, params: release_params
     end
 
-    assert_redirected_to release_url(Release.last)
+    assert_redirected_to admin_release_path(Release.last)
   end
 
   test "should show release" do
-    get release_url(@release)
+    sign_in
+    get admin_release_path(@release)
     assert_response :success
   end
 
   test "should get edit" do
-    get edit_release_url(@release)
+    sign_in
+    get edit_admin_release_path(@release)
     assert_response :success
   end
 
   test "should update release" do
-    patch release_url(@release), params: { release: { artist: @release.artist, credits: @release.credits, discogs_url: @release.discogs_url, download_url: @release.download_url, name: @release.name, playlist: @release.playlist, released_on: @release.released_on } }
-    assert_redirected_to release_url(@release)
+    sign_in
+    patch admin_release_path(@release), params: release_params
+    assert_redirected_to admin_release_path(@release)
   end
 
   test "should destroy release" do
+    sign_in
     assert_difference('Release.count', -1) do
-      delete release_url(@release)
+      delete admin_release_path(@release)
     end
 
-    assert_redirected_to releases_url
+    assert_redirected_to admin_releases_path
+  end
+
+  private
+
+  def release_params
+    {
+      release: {
+        catalog_number: 'HSH033',
+        artist: 'Betty',
+        name: 'Bluesy Betty',
+        released_on: '25/04/2020',
+        playlist: '1. Track',
+        credits: 'Cover by Tina',
+        discogs_path: 'https://discogs.com/releases/222',
+        download_path: 'https://hsh003.zip',
+        bandcamp_path: ''
+      }
+    }
   end
 end

@@ -15,3 +15,5 @@ require("@rails/activestorage").start()
 // const imagePath = (name) => images(name, true)
 
 import "controllers"
+
+require("css/application.scss")

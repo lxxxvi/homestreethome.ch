@@ -1,11 +1,9 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 bustin:
   catalog_number: 'HSH001'
   artist: 'Various Artists'
   name: 'Bustin through the ceiling'
   released_on: 2014-02-01
-  playlist: >
+  playlist: |
     1. Samplix & DJ 4tex - Intro (Bustin') (0:51)
     2. Soulcrash - Cats Are Still Local (2:19)
     3. ill Figure - Sidetrack (2:54)
@@ -34,7 +32,7 @@ chue:
   artist: 'B.O.D.'
   name: 'Chue Ide Stube EP'
   released_on: 2014-10-01
-  playlist: >
+  playlist: |
     1. BOD
     2. Beats Und Raps
     3. Kei Chraft
@@ -51,7 +49,7 @@ rumbled:
   artist: 'Various Artists'
   name: 'Rumbled Raincoat Rumbled Face'
   released_on: 2019-06-15
-  playlist: >
+  playlist: |
     * C1. slik nik - Comin'
     * C2. Geil Dave - Rumbled Raincoat Rumbled Face
     * C3. Geil Date - Different Methods
