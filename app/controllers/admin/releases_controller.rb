@@ -9,14 +9,15 @@ class Admin::ReleasesController < Admin::BaseController
   end
 
   def new
-    @release = Release.new
+    @admin_release_form = Admin::ReleaseForm.new(Release.new)
   end
 
   def edit
+    @admin_release_form = Admin::ReleaseForm.new(@release)
   end
 
   def create
-    @release = Release.new(release_params)
+    @admin_release_form = Admin::ReleaseForm.new(Release.new, release_params)
 
     if @release.save
       redirect_to [:admin, @release], notice: 'Release was successfully created.'
