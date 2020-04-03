@@ -9,7 +9,7 @@
     = javascript_pack_tag 'application'
   %body
     - if signed_in?
-      = link_to 'Sign out [->', admin_sessions_path, method: :delete
+      = link_to 'Sign out', admin_sessions_path, method: :delete
     - if notice.present?
       .text-blue-600{ role: 'alert' }= notice
     = yield
