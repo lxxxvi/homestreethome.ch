@@ -3,10 +3,9 @@ class Admin::BaseController < ApplicationController
   layout 'admin/layouts/application'
 
   def authenticate
-    unless helpers.signed_in?
-      flash[:notice] = 'Please login first'
-      redirect_to new_admin_sessions_path
-    end
+    return if helpers.signed_in?
+
+    redirect_to new_admin_sessions_path, notice: 'Please login first'
   end
 
   private

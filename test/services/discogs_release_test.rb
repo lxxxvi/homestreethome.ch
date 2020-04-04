@@ -12,7 +12,7 @@ class DiscogsReleaseTest < ActiveSupport::TestCase
     assert_equal 'We Be To Beat What Key Be To Lock', release.title
     assert_match expected_image_url_pattern, release.image_url
     assert_equal Date.new(2014, 6, 28), release.released_on
-    assert_equal expected_tracklist, release.tracklist
+    assert_equal expected_tracklist.chomp, release.tracklist
     assert_equal expected_credits, release.credits
   end
 
@@ -23,25 +23,7 @@ class DiscogsReleaseTest < ActiveSupport::TestCase
   end
 
   def expected_tracklist
-    "1. DJ Okay - We Be To Beat
-2. Bustle Frog & Kneecap - Seasick In Croatia
-3. ill Figure - Try And Error
-4. DJ Okay - This And That Yaaa
-5. Samplix - Jazznez
-6. Bustle Frog - RawBin
-7. Rob Chop The Vinylator - Dope Fantastic
-8. Tinu - Remember
-9. Knut Butter - Ech Fend Dech Wörklech Fresh
-10. slik nik - Full Of Culture
-11. Bustle Frog - Macanecca
-12. Knut Butter - Relax And Float Downstream
-13. Tinu - Sweet Smell Of Success
-14. Kneecap - Pointless And Silly
-15. ill Figure & DJ Okay - Pocket Science
-16. Soulcrash - Jazzmine
-17. Samplix - 4evaeva
-18. slik nik - I Rum 2 Su
-19. Rob Chop The Vinylator - Dandy"
+    file_fixture('expected_tracklist_hsh002.txt').read
   end
 
   def expected_credits
