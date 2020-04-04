@@ -1,12 +1,11 @@
 class Admin::ReleasesController < Admin::BaseController
-  before_action :set_release, only: [:show, :edit, :update, :destroy]
+  before_action :set_release, only: %i[show edit update destroy]
 
   def index
     @releases = Release.all
   end
 
-  def show
-  end
+  def show; end
 
   def edit
     @form = Admin::ReleaseForm.new(@release)

@@ -45,6 +45,6 @@ class DiscogsReleaseTest < ActiveSupport::TestCase
   end
 
   def expected_credits
-    "Producer - Samplix"
+    'Producer - Samplix'
   end
 end

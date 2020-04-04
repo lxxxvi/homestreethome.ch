@@ -1,8 +1,7 @@
 class Admin::SessionsController < Admin::BaseController
   skip_before_action :authenticate, only: %i[new create destroy]
 
-  def new
-  end
+  def new; end
 
   def create
     if params[:password] == Rails.configuration.admin_password

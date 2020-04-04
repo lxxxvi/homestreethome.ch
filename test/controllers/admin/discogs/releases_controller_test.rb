@@ -32,5 +32,4 @@ class Admin::Discogs::ReleasesControllerTest < ActionDispatch::IntegrationTest
     end
     assert_response :success
   end
-
 end

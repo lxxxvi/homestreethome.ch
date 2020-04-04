@@ -9,7 +9,7 @@ module Discogs
     end
 
     def response_fixture_file_path
-      "responses/discogs/release_not_found.json"
+      'responses/discogs/release_not_found.json'
     end
 
     def response_status
