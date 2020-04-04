@@ -5,11 +5,6 @@ class ApplicationForm
 
   attr_reader :object, :params
 
-  def initialize(object, params = {})
-    @object = object
-    @params = params
-  end
-
   def model_name
     ActiveModel::Name.new(self, nil, get_model_name)
   end

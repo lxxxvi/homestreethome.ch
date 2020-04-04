@@ -1,9 +1,10 @@
 bustin:
+  discogs_release_id: 5303073
   catalog_number: 'HSH001'
   artist: 'Various Artists'
-  name: 'Bustin through the ceiling'
+  title: 'Bustin through the ceiling'
   released_on: 2014-02-01
-  playlist: |
+  tracklist: |
     1. Samplix & DJ 4tex - Intro (Bustin') (0:51)
     2. Soulcrash - Cats Are Still Local (2:19)
     3. ill Figure - Sidetrack (2:54)
@@ -25,14 +26,14 @@ bustin:
     19. Rob Chop The Vinylator - Egypt's Land (2:38)
     20. ill Figure - Outro (See You Soon) (1:56)
   download_url: 'https://cdn.homestreethome.ch/releases/hsh001/zip/hsh001.zip'
-  discogs_url: 'https://www.discogs.com/release/5303073'
 
 chue:
+  discogs_release_id: 6224255
   catalog_number: 'HSH003'
   artist: 'B.O.D.'
-  name: 'Chue Ide Stube EP'
+  title: 'Chue Ide Stube EP'
   released_on: 2014-10-01
-  playlist: |
+  tracklist: |
     1. BOD
     2. Beats Und Raps
     3. Kei Chraft
@@ -42,14 +43,14 @@ chue:
     7. Heiweh
     8. Capdigger
   download_url: 'https://cdn.homestreethome.ch/releases/hsh003/zip/hsh003.zip'
-  discogs_url: 'https://www.discogs.com/release/6224255'
 
 rumbled:
+  discogs_release_id: 13776867
   catalog_number: 'HSH014'
   artist: 'Various Artists'
-  name: 'Rumbled Raincoat Rumbled Face'
+  title: 'Rumbled Raincoat Rumbled Face'
   released_on: 2019-06-15
-  playlist: |
+  tracklist: |
     * C1. slik nik - Comin'
     * C2. Geil Dave - Rumbled Raincoat Rumbled Face
     * C3. Geil Date - Different Methods
@@ -63,4 +64,3 @@ rumbled:
   credits: |
     Artwork by Irma
   download_url: 'https://cdn.homestreethome.ch/releases/hsh014/zip/hsh014.zip'
-  discogs_url: 'https://www.discogs.com/release/13776867'

@@ -1,0 +1,11 @@
+%h1 Release from Discogs
+
+= form_with model: @form do |f|
+  .field
+    = f.label :discogs_release_id
+    = f.text_field :discogs_release_id
+    - if @form.errors.key?(:discogs_release_id)
+      .form-error-message
+        = @form.errors.messages[:discogs_release_id].join("\n")
+  .actions
+    = f.submit nil

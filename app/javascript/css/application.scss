@@ -21,3 +21,8 @@ a {
 a:hover {
   @apply underline;
 }
+
+
+.form-error-message {
+  @apply text-red-500;
+}

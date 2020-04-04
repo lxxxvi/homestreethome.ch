@@ -16,16 +16,6 @@ class Admin::ReleasesController < Admin::BaseController
     @admin_release_form = Admin::ReleaseForm.new(@release)
   end
 
-  def create
-    @admin_release_form = Admin::ReleaseForm.new(Release.new, release_params)
-
-    if @release.save
-      redirect_to [:admin, @release], notice: 'Release was successfully created.'
-    else
-      render :new
-    end
-  end
-
   def update
     if @release.update(release_params)
       redirect_to [:admin, @release], notice: 'Release was successfully updated.'

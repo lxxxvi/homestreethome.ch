@@ -16,14 +16,15 @@ ActiveRecord::Schema.define(version: 2020_03_31_145951) do
   enable_extension "plpgsql"
 
   create_table "releases", force: :cascade do |t|
+    t.integer "discogs_release_id", null: false
     t.string "catalog_number", null: false
     t.string "artist", null: false
-    t.string "name", null: false
+    t.string "title", null: false
+    t.string "image_url"
     t.date "released_on", null: false
-    t.text "playlist", null: false
+    t.text "tracklist", null: false
     t.text "credits"
     t.string "download_url"
-    t.string "discogs_url"
     t.string "bandcamp_url"
     t.datetime "published_at"
     t.datetime "created_at", precision: 6, null: false
