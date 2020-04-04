@@ -14,6 +14,7 @@ class DiscogsRelease
       release.catalog_number = read_catalog_number
       release.artist = read_artist
       release.title = read_title
+      release.image_url = read_image_url
       release.released_on = read_released_on
       release.tracklist = read_tracklist
       release.credits = read_credits
@@ -36,6 +37,10 @@ class DiscogsRelease
 
   def read_title
     discogs_release_result.title
+  end
+
+  def read_image_url
+    discogs_release_result&.images&.first&.resource_url
   end
 
   def read_released_on

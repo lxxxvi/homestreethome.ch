@@ -14,7 +14,7 @@ class Admin::Discogs::ReleaseFormTest < ActiveSupport::TestCase
     form = Admin::Discogs::ReleaseForm.new(Release.new, discogs_release_id: 11223344)
     assert_not form.valid?
 
-    assert_includes form.errors.full_messages_for(:discogs_release_id,
+    assert_includes form.errors.full_messages_for(:discogs_release_id),
                     "Discogs release is not from Home Street Home Records"
   end
 

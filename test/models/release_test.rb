@@ -9,9 +9,9 @@ class ReleaseTest < ActiveSupport::TestCase
       assert_equal ["can't be blank"], messages[:discogs_release_id]
       assert_equal ["can't be blank"], messages[:catalog_number]
       assert_equal ["can't be blank"], messages[:artist]
-      assert_equal ["can't be blank"], messages[:name]
+      assert_equal ["can't be blank"], messages[:title]
       assert_equal ["can't be blank"], messages[:released_on]
-      assert_equal ["can't be blank"], messages[:playlist]
+      assert_equal ["can't be blank"], messages[:tracklist]
     end
   end
 

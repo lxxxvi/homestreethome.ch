@@ -36,7 +36,7 @@ class Admin::ReleasesController < Admin::BaseController
   end
 
   def release_params
-    params.require(:release).permit(:catalog_number, :artist, :name, :released_on, :playlist, :credits, :download_url,
+    params.require(:release).permit(:catalog_number, :artist, :title, :released_on, :tracklist, :credits, :download_url,
                                     :discogs_url, :published_at)
   end
 end

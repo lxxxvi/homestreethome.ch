@@ -1,20 +1,26 @@
 %p#notice= notice
 
 %p
+  %b Discogs Release ID:
+  = @release.discogs_release_id
+%p
   %b Catalog Number:
   = @release.catalog_number
 %p
   %b Artist:
   = @release.artist
 %p
-  %b Name:
-  = @release.name
+  %b Title:
+  = @release.title
+%p
+  %b Image URL:
+  = @release.image_url
 %p
   %b Released on:
   = @release.released_on
 %p
-  %b Playlist:
-  = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true).render(@release.playlist || '').html_safe
+  %b Tracklist:
+  = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true).render(@release.tracklist || '').html_safe
 %p
   %b Credits:
   = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true).render(@release.credits || '').html_safe
@@ -22,10 +28,7 @@
   %b Download URL:
   = @release.download_url
 %p
-  %b Discogs URL:
-  = @release.discogs_url
-%p
-  %b Discogs URL:
+  %b Bandamp URL:
   = @release.bandcamp_url
 %p
   %b Published:

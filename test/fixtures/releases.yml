@@ -3,6 +3,7 @@ bustin:
   catalog_number: 'HSH001'
   artist: 'Various Artists'
   title: 'Bustin through the ceiling'
+  image_url: 'https://img.discogs.com/SlP3Jv__QidbPP3uWdDLYB-l4Sc=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-5303073-1390056310-2222.jpeg.jpg'
   released_on: 2014-02-01
   tracklist: |
     1. Samplix & DJ 4tex - Intro (Bustin') (0:51)
@@ -32,6 +33,7 @@ chue:
   catalog_number: 'HSH003'
   artist: 'B.O.D.'
   title: 'Chue Ide Stube EP'
+  image_url: 'https://img.discogs.com/mMXYQVsQIQ0zAGWkQc1Cz7u8VTg=/fit-in/600x595/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-6224255-1414145766-7622.jpeg.jpg'
   released_on: 2014-10-01
   tracklist: |
     1. BOD
@@ -49,6 +51,7 @@ rumbled:
   catalog_number: 'HSH014'
   artist: 'Various Artists'
   title: 'Rumbled Raincoat Rumbled Face'
+  image_url: 'https://img.discogs.com/AUglOsfOUudR4iLmrI5aWeAltQ4=/fit-in/600x603/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-13776867-1560929803-7722.jpeg.jpg'
   released_on: 2019-06-15
   tracklist: |
     * C1. slik nik - Comin'

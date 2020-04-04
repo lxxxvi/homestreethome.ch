@@ -60,10 +60,10 @@ class ReleasesTest < ApplicationSystemTestCase
   def fill_in_form
     fill_in 'Catalog number', with: 'HSH099'
     fill_in 'Artist', with: 'John'
-    fill_in 'Name', with: 'Cool music'
+    fill_in 'Title', with: 'Cool music'
     fill_in 'Released on', with: '30.09.2020'
 
-    fill_in 'Playlist', with: "1. Track One\n2. Track two"
+    fill_in 'Tracklist', with: "1. Track One\n2. Track two"
     fill_in 'Credits', with: 'Cover by Bill'
 
     fill_in 'Download URL', with: 'https://hsh009.zip'

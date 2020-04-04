@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2020_03_31_145951) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["catalog_number"], name: "index_releases_on_catalog_number", unique: true
+    t.index ["discogs_release_id"], name: "index_releases_on_discogs_release_id", unique: true
   end
 
 end
