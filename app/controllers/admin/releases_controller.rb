@@ -8,18 +8,17 @@ class Admin::ReleasesController < Admin::BaseController
   def show
   end
 
-  def new
-    @admin_release_form = Admin::ReleaseForm.new(Release.new)
-  end
-
   def edit
-    @admin_release_form = Admin::ReleaseForm.new(@release)
+    @form = Admin::ReleaseForm.new(@release)
   end
 
   def update
-    if @release.update(release_params)
-      redirect_to [:admin, @release], notice: 'Release was successfully updated.'
+    @form = Admin::ReleaseForm.new(@release, admin_release_params)
+
+    if @form.save
+      redirect_to admin_release_path(@form.object), notice: 'Release was successfully updated.'
     else
+      flash.now[:alert] = 'update went wrong'
       render :edit
     end
   end
@@ -35,8 +34,7 @@ class Admin::ReleasesController < Admin::BaseController
     @release = Release.find(params[:id])
   end
 
-  def release_params
-    params.require(:release).permit(:catalog_number, :artist, :title, :released_on, :tracklist, :credits, :download_url,
-                                    :discogs_url, :published_at)
+  def admin_release_params
+    params.require(:admin_release).permit(:download_url, :bandcamp_url, :published)
   end
 end

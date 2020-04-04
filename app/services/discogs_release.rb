@@ -6,7 +6,7 @@ class DiscogsRelease
   end
 
   def home_street_home_release?
-    discogs_release_result.labels.any? { |label| label.name == HOME_STREET_HOME_RECORDS_NAME }
+    discogs_release_result&.labels&.any? { |label| label.name == HOME_STREET_HOME_RECORDS_NAME }
   end
 
   def to_release

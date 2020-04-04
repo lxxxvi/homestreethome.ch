@@ -7,7 +7,7 @@ class Admin::Discogs::ReleasesController < Admin::BaseController
     @form = Admin::Discogs::ReleaseForm.new(Release.new, admin_discogs_release_params)
 
     if @form.save
-      redirect_to admin_release_path(@release), notice: 'Release was successfully created.'
+      redirect_to admin_release_path(@form.object), notice: 'Release was successfully created.'
     else
       render :new
     end

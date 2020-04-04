@@ -15,8 +15,8 @@ class Admin::Discogs::ReleaseForm < ApplicationForm
   def save
     return unless valid?
 
-    release = discogs_release.to_release
-    release.save!
+    object.attributes = discogs_release.to_release.attributes
+    object.save!
   end
 
   private

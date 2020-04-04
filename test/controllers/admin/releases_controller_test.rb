@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ReleasesControllerTest < ActionDispatch::IntegrationTest
+class Admin::ReleasesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @release = releases(:bustin)
   end
@@ -9,21 +9,6 @@ class ReleasesControllerTest < ActionDispatch::IntegrationTest
     sign_in
     get admin_releases_path
     assert_response :success
-  end
-
-  test 'should get new' do
-    sign_in
-    get new_admin_release_path
-    assert_response :success
-  end
-
-  test 'should create release' do
-    sign_in
-    assert_difference('Release.count') do
-      post admin_releases_path, params: release_params
-    end
-
-    assert_redirected_to admin_release_path(Release.last)
   end
 
   test 'should show release' do
@@ -57,16 +42,10 @@ class ReleasesControllerTest < ActionDispatch::IntegrationTest
 
   def release_params
     {
-      release: {
-        catalog_number: 'HSH033',
-        artist: 'Betty',
-        title: 'Bluesy Betty',
-        released_on: '25/04/2020',
-        tracklist: '1. Track',
-        credits: 'Cover by Tina',
-        discogs_path: 'https://discogs.com/releases/222',
+      admin_release: {
         download_path: 'https://hsh003.zip',
-        bandcamp_path: ''
+        bandcamp_path: '',
+        published: '1'
       }
     }
   end

@@ -1,9 +1,14 @@
 require 'stubs/discogs/base_stub'
 require 'stubs/discogs/release_stub'
+require 'stubs/discogs/release_not_found_stub'
 
 module DiscogsStubs
   def discogs_release_stub(discogs_release_id)
     to_stub(Discogs::ReleaseStub.new(discogs_release_id).stub_struct)
+  end
+
+  def discogs_release_not_found_stub(discogs_release_id)
+    to_stub(Discogs::ReleaseNotFoundStub.new(discogs_release_id).stub_struct)
   end
 
   def to_stub(stub_struct)

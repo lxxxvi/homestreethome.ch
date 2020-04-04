@@ -2,10 +2,11 @@
 
 = form_with model: @form do |f|
   .field
-    = f.label :discogs_release_id
+    = f.label :discogs_release_id, 'Discogs Release ID'
     = f.text_field :discogs_release_id
     - if @form.errors.key?(:discogs_release_id)
       .form-error-message
         = @form.errors.messages[:discogs_release_id].join("\n")
   .actions
     = f.submit nil
+    = link_to 'Back to releases', admin_releases_path
