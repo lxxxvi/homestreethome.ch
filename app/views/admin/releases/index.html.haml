@@ -1,36 +1,27 @@
-%h1 Releases
+.my-10
+  %h1 Releases
 
-.actions
-  = link_to 'New Release From Discogs', new_admin_discogs_release_path
+.my-10
+  .actions
+    = link_to 'New Release From Discogs', new_admin_discogs_release_path
 
-%table
-  %thead
-    %tr
-      %th Discogs Release ID
-      %th Cat#
-      %th Artist
-      %th Title
-      %th Released on
-      %th Download URL
-      %th Bandcamp URL
-      %th Published
-      %th
-      %th
-      %th
+.border.border-green-200
+  %table.w-full
+    %thead
+      %tr.text-left.text-xs.tracking-widest.uppercase.text-green-900
+        %th.border-b.border-green-200.p-3
+        %th.border-b.border-green-200.p-3 Cat #
+        %th.border-b.border-green-200.p-3 Artist
+        %th.border-b.border-green-200.p-3 Title
+        %th.border-b.border-green-200.p-3.text-right Released on
+        %th.border-b.border-green-200.p-3
 
-  %tbody
-    - @releases.each do |release|
-      %tr
-        %td= release.discogs_release_id
-        %td= release.catalog_number
-        %td= release.artist
-        %td= release.title
-        %td= release.released_on
-        %td= release.download_url
-        %td= release.bandcamp_url
-        %td= release.published_at.present? ? 'Y' : 'N'
-        %td= link_to 'Preview', admin_release_path(release)
-        %td= link_to 'Edit', edit_admin_release_path(release)
-        %td= link_to 'Destroy', admin_release_path(release), method: :delete, data: { confirm: 'Are you sure?' }
-
-%br
+    %tbody
+      - @releases.each do |release|
+        %tr
+          %td.p-3= image_tag release.image_url, size: '40x40'
+          %td.p-3= release.catalog_number
+          %td.p-3= release.artist
+          %td.p-3= release.title
+          %td.p-3.text-right= release.released_on
+          %td.p-3.text-right= link_to 'Edit', edit_admin_release_path(release)
