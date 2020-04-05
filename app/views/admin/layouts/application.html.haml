@@ -7,7 +7,7 @@
     = csp_meta_tag
     = stylesheet_pack_tag 'application', media: 'all'
     = javascript_pack_tag 'application'
-  %body.m-5
+  %body.m-5.bg-gray-100
     - if signed_in?
       = link_to 'Sign out', admin_sessions_path, method: :delete, class: 'text-gray-500'
     - if notice.present?

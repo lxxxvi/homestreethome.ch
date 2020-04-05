@@ -2,16 +2,9 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-input, textarea {
-  @apply border p-1;
-}
 
 [disabled] {
   @apply text-gray-500;
-}
-
-label {
-  @apply block text-xs text-gray-700;
 }
 
 ol {
@@ -26,6 +19,6 @@ a:hover {
   @apply text-pink-500;
 }
 
-.form-error-message {
-  @apply text-red-500;
+h1 {
+  @apply  tracking-wide text-xl text-green-700;
 }

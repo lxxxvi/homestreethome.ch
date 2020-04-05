@@ -3,11 +3,11 @@
 
 .my-10
   .actions
-    = link_to 'New Release From Discogs', new_admin_discogs_release_path, class: 'py-2 px-4 bg-green-700 text-green-100 rounded-lg hover:text-pink-100 hover:bg-pink-700'
+    = link_to 'New Release From Discogs', new_admin_discogs_release_path, class: 'py-2 px-4 bg-green-700 text-green-100 rounded-lg hover:text-pink-100 hover:bg-pink-700 cursor-pointer'
 
 .flex.flex-col
-  .-my-2.py-2.overflow-x-auto.sm:-mx-6.sm:px-6.lg:-mx-8.lg:px-8
-    .align-middle.inline-block.min-w-full.overflow-hidden.sm:rounded-lg.border-b.border-green-200.shadow
+  .-my-2.pt-2.pb-10.overflow-x-auto.sm:-mx-6.sm:px-6.lg:-mx-8.lg:px-8
+    .align-middle.inline-block.min-w-full.overflow-hidden.sm:rounded-lg.shadow-xl
       %table.min-w-full
         %thead
           %tr.text-left.text-xs.tracking-widest.uppercase.text-green-900
@@ -36,4 +36,5 @@
                 - else
                   .px-2.inline-flex.text-xs.leading-5.font-semibold.rounded-full.bg-indigo-100.text-indigo-800
                     Draft
-              %td.px-6.py-4.whitespace-no-wrap.border-b.border-green-200= link_to 'Edit', edit_admin_release_path(release)
+              %td.px-6.py-4.whitespace-no-wrap.border-b.border-green-200.text-right
+                = link_to 'Edit', edit_admin_release_path(release)
