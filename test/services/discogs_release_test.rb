@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class DiscogsReleaseTest < ActiveSupport::TestCase
-  test '#to_release' do
+  test '#to_release for compilation' do
     discogs_release_stub(5835903)
 
     discogs_release = DiscogsRelease.new(5835903)
@@ -14,6 +14,10 @@ class DiscogsReleaseTest < ActiveSupport::TestCase
     assert_equal Date.new(2014, 6, 28), release.released_on
     assert_equal expected_tracklist.chomp, release.tracklist
     assert_equal expected_credits, release.credits
+  end
+
+  test '#to_release for album' do
+    assert false, 'Test where track.artists is not present'
   end
 
   private

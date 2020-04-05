@@ -7,4 +7,8 @@ class Release < ApplicationRecord
   def published?
     published_at.present?
   end
+
+  def decorate
+    @decorate ||= ReleaseDecorator.new(self)
+  end
 end

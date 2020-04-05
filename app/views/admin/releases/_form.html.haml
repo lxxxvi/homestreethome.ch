@@ -1,37 +1,57 @@
-= form_with model: @form do |f|
-  - if @form.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@release.errors.count, "error")} prohibited this release from being saved:"
-      %ul
-        - @release.errors.full_messages.each do |message|
-          %li= message
-  .field
-    = f.label :discogs_release_id
-    = f.text_field :discogs_release_id, value: @form.object.discogs_release_id, disabled: true
-  .field
-    = f.label :catalog_number
-    = f.text_field :catalog_number, value: @form.object.catalog_number, disabled: true
-  .field
-    = f.label :artist
-    = f.text_field :artist, value: @form.object.artist, disabled: true
-  .field
-    = f.label :title
-    = f.text_field :title, value: @form.object.title, disabled: true
-  .field
-    = f.label :tracklist
-    = f.text_area :tracklist, value: @form.object.tracklist, disabled: true, class: 'text-xs w-1/2 h-32'
-  .field
-    = f.label :credits
-    = f.text_area :credits, value: @form.object.credits, disabled: true, class: 'text-xs w-1/2 h-32'
-  .field
-    = f.label :download_url, 'Download URL'
-    = f.text_field :download_url, class: 'w-1/3'
-  .field
-    = f.label :bandcamp_url, 'Bandcamp URL'
-    = f.text_field :bandcamp_url, class: 'w-1/3'
-  .field
-    = f.label :published, 'Published?'
-    = f.check_box :published
 
-  .actions
-    = f.submit
+.my-10
+  .rounded-lg.border.shadow-xl.p-4.bg-white
+    .flex.mb-3.pb-1.border-b
+      .w-full
+        .text-green-900.tracking-wide Data from Discogs
+    .flex
+      .text-green-400.p-2.pl-0.text-sm{ class: 'w-1/3' }
+        This data is automatically fetched from Discogs. Editing is disabled.
+      .p-2.pr-0{ class: 'w-2/3' }
+        .flex.flex-wrap
+          .w-full.text-xs.text-gray-700.tracking-wider Discogs Release ID
+          .w-full
+            .leading-5= @form.object.discogs_release_id
+        .flex.flex-wrap.mt-4
+          .w-full.text-xs.text-gray-700.tracking-wider Catalog Number
+          .w-full
+            .leading-5= @form.object.catalog_number
+        .flex.flex-wrap.mt-4
+          .w-full.text-xs.text-gray-700.tracking-wider Artist
+          .w-full
+            .leading-5= @form.object.artist
+        .flex.flex-wrap.mt-4
+          .w-full.text-xs.text-gray-700.tracking-wider Title
+          .w-full
+            .leading-5= @form.object.title
+        .flex.flex-wrap.mt-4
+          .w-full.text-xs.text-gray-700.tracking-wider Tracklist
+          .w-full
+            .leading-5.my-2= @form.object.decorate.display_tracklist
+
+        .flex.flex-wrap.mt-4
+          .w-full.text-xs.text-gray-700.tracking-wider Credits
+          .w-full
+            .leading-5= @form.object.decorate.display_credits
+
+    .flex.mb-3.mt-5.pb-1.border-b
+      .w-full
+        .text-green-900.tracking-wide Additional
+    .flex
+      .text-green-400.p-2.pl-0.text-sm{ class: 'w-1/3' }
+        You may update these fields.
+      .p-2.pr-0{ class: 'w-2/3' }
+        = form_with model: @form do |f|
+
+          .flex.flex-wrap
+            = f.label :download_url, 'Download URL', class: 'w-full text-xs text-gray-700 tracking-wider'
+            = f.text_field :download_url, class: 'w-full border border-900 py-1 px-2 rounded', placeholder: '(optional)'
+          .flex-wrap.mt-4
+            = f.label :bandcamp_url, 'Bandcamp URL', class: 'w-full text-xs text-gray-700 tracking-wider'
+            = f.text_field :bandcamp_url, class: 'w-full border border-900 py-1 px-2 rounded', placeholder: '(optional)'
+          .flex-wrap.mt-4
+            = f.label :published, 'Published?', class: 'w-full text-xs text-gray-700 tracking-wider'
+            .block.py-1= f.check_box :published
+          .actions.mt-5
+            = f.submit nil, class: 'button'
+            = link_to 'Back', admin_releases_path, class: 'ml-3 text-gray'

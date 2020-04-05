@@ -5,8 +5,6 @@ class Admin::ReleasesController < Admin::BaseController
     @releases = Release.ordered_by_release_date
   end
 
-  def show; end
-
   def edit
     @form = Admin::ReleaseForm.new(@release)
   end
@@ -15,9 +13,8 @@ class Admin::ReleasesController < Admin::BaseController
     @form = Admin::ReleaseForm.new(@release, admin_release_params)
 
     if @form.save
-      redirect_to admin_release_path(@form.object), notice: 'Release was successfully updated.'
+      redirect_to edit_admin_release_path(@form.object), notice: 'Release was successfully updated.'
     else
-      flash.now[:alert] = 'update went wrong'
       render :edit
     end
   end
