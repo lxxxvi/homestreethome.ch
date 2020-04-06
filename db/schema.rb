@@ -24,7 +24,6 @@ ActiveRecord::Schema.define(version: 2020_03_31_145951) do
     t.date "released_on", null: false
     t.text "tracklist", null: false
     t.text "credits"
-    t.string "download_url"
     t.string "bandcamp_url"
     t.datetime "published_at"
     t.datetime "created_at", precision: 6, null: false

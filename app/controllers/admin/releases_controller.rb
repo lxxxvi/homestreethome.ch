@@ -31,6 +31,6 @@ class Admin::ReleasesController < Admin::BaseController
   end
 
   def admin_release_params
-    params.require(:admin_release).permit(:download_url, :bandcamp_url, :published)
+    params.require(:admin_release).permit(:bandcamp_url, :published)
   end
 end

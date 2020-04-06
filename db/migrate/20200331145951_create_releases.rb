@@ -9,7 +9,6 @@ class CreateReleases < ActiveRecord::Migration[6.0]
       t.date :released_on, null: false
       t.text :tracklist, null: false
       t.text :credits, null: true
-      t.string :download_url, null: true
       t.string :bandcamp_url, null: true
       t.datetime :published_at, null: true
 
