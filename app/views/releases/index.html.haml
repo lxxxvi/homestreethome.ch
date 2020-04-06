@@ -1,0 +1,13 @@
+%ul
+  - @releases.each do |release|
+    %li.mb-10
+      .flex.flex-wrap
+        .w-full
+          .leading-3.text-sm.text-gray-700
+            = release.artist
+        .w-full
+          .text-xl.tracking-wide
+            = link_to release.title, release_path(release)
+        .w-full
+          .leading-4.text-sm.text-gray-500
+            = release.released_on

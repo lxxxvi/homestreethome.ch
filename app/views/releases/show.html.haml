@@ -1,0 +1,30 @@
+.my-10
+  = link_to 'Back to overview', releases_path
+
+.flex.flex-wrap
+  .w-full
+    = image_tag @release.image_url, class: 'ml-auto mr-auto md:w-1/2 w-full'
+  .w-full.mt-10
+    .text-gray-700
+      = @release.artist
+  .w-full
+    .text-2xl.tracking-wide
+      = @release.title
+  .w-full
+    .text-sm.text-gray-500
+      = @release.released_on
+
+  .w-full.mt-10
+    .text-gray-500.text-sm.tracking-wider.mb-2 Tracklist
+    = @release.decorate.display_tracklist
+
+  - if @release.credits.present?
+    .w-full.mt-10
+      .text-gray-500.text-sm.tracking-wider.mb-2 Credits
+      = @release.decorate.display_credits
+
+  .w-full.mt-10
+    .text-gray-500.text-sm.tracking-wider.mb-2 More
+    .my-1= link_to 'Discogs', @release.decorate.discogs_url
+    - if @release.bandcamp_url.present?
+      .my-1= link_to 'Bandcamp', @release.bandcamp_url

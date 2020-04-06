@@ -2,7 +2,7 @@ class Admin::ReleasesController < Admin::BaseController
   before_action :set_release, only: %i[edit update destroy]
 
   def index
-    @releases = Release.ordered_by_release_date
+    @releases = Release.ordered_antichronological
   end
 
   def edit
