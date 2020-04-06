@@ -39,7 +39,6 @@ class ReleasesTest < ApplicationSystemTestCase
     visit admin_releases_url
     click_on 'Edit', match: :first
 
-    fill_in 'Download URL', with: 'https://hsh009.zip'
     fill_in 'Bandcamp URL', with: 'https://label.bandcamp.com/album/cool-music'
     check 'Published?'
 
