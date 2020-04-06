@@ -11,12 +11,6 @@ class Admin::ReleasesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test 'should show release' do
-    sign_in
-    get admin_release_path(@release)
-    assert_response :success
-  end
-
   test 'should get edit' do
     sign_in
     get edit_admin_release_path(@release)
@@ -26,7 +20,7 @@ class Admin::ReleasesControllerTest < ActionDispatch::IntegrationTest
   test 'should update release' do
     sign_in
     patch admin_release_path(@release), params: release_params
-    assert_redirected_to admin_release_path(@release)
+    assert_redirected_to edit_admin_release_path(@release)
   end
 
   test 'should destroy release' do

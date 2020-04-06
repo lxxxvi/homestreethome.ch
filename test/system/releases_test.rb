@@ -52,7 +52,8 @@ class ReleasesTest < ApplicationSystemTestCase
   test 'destroying a Release' do
     sign_in
     visit admin_releases_url
-    click_on 'Destroy', match: :first
+    click_on 'Edit', match: :first
+    click_on 'Delete release'
 
     assert_text 'Release was successfully destroyed'
   end

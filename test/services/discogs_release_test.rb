@@ -13,7 +13,7 @@ class DiscogsReleaseTest < ActiveSupport::TestCase
     assert_match %r{https://img.discogs.com/.*/R-5835903-1404044169-4898.jpeg.jpg}, release.image_url
     assert_equal Date.new(2014, 6, 28), release.released_on
     assert_equal file_fixture('expected_tracklist_hsh002.txt').read.chomp, release.tracklist
-    assert_equal 'Producer - Samplix', release.credits
+    assert_equal '* Producer - Samplix', release.credits
   end
 
   test '#to_release for album' do
@@ -29,6 +29,6 @@ class DiscogsReleaseTest < ActiveSupport::TestCase
     assert_match %r{https://img.discogs.com/.*/R-7579828-1444466549-8708.jpeg.jpg}, release.image_url
     assert_equal Date.new(2015, 7, 11), release.released_on
     assert_equal file_fixture('expected_tracklist_hsh006.txt').read.chomp, release.tracklist
-    assert_equal 'Mastered By - Samplix', release.credits
+    assert_equal '* Mastered By - Samplix', release.credits
   end
 end

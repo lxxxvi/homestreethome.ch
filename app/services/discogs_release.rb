@@ -55,18 +55,20 @@ class DiscogsRelease
     return if discogs_release_result.extraartists.nil?
 
     discogs_release_result.extraartists.map do |extra_artist|
-      "#{extra_artist.role} - #{extra_artist.name}"
+      to_markdown_list_item("#{extra_artist.role} - #{extra_artist.name}")
     end.join("\n")
   end
 
   def build_track_name(track)
-      position = track.position
-      artist = build_artists(track.artists)
-      title = track.title
+    position = track.position
+    artist = build_artists(track.artists)
+    title = track.title
 
-      track_name = "#{position}. "
-      track_name << "#{artist} - " unless artist.nil?
-      track_name << title
+    track_name = "#{position}. "
+    track_name << "#{artist} - " unless artist.nil?
+    track_name << title
+
+    to_markdown_list_item(track_name)
   end
 
   def build_artists(artists)
@@ -82,5 +84,9 @@ class DiscogsRelease
 
   def clean_artist_name(name)
     name.gsub(/\([0-9]+\)$/, '').strip
+  end
+
+  def to_markdown_list_item(text)
+    "* #{text}"
   end
 end
