@@ -20,7 +20,6 @@ class DiscogsReleaseTest < ActiveSupport::TestCase
     discogs_release_stub(7579828)
 
     discogs_release = DiscogsRelease.new(7579828)
-
     release = discogs_release.to_release
 
     assert_equal 'HSH006', release.catalog_number
@@ -30,5 +29,14 @@ class DiscogsReleaseTest < ActiveSupport::TestCase
     assert_equal Date.new(2015, 7, 11), release.released_on
     assert_equal file_fixture('expected_tracklist_hsh006.txt').read.chomp, release.tracklist
     assert_equal '* Mastered By - Samplix', release.credits
+  end
+
+  test 'release with multiple artist' do
+    discogs_release_stub(13167304)
+
+    discogs_release = DiscogsRelease.new(13167304)
+    release = discogs_release.to_release
+
+    assert_equal 'Exist & Samplix', release.artist
   end
 end

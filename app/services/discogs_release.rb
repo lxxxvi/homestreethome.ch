@@ -32,7 +32,7 @@ class DiscogsRelease
   end
 
   def read_artist
-    clean_artist_name(discogs_release_result.artists_sort)
+    build_artists(discogs_release_result.artists)
   end
 
   def read_title
