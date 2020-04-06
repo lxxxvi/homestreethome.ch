@@ -27,7 +27,7 @@ class Admin::ReleasesController < Admin::BaseController
   private
 
   def set_release
-    @release = Release.find(params[:id])
+    @release = Release.find_by!(catalog_number: params[:catalog_number])
   end
 
   def admin_release_params
