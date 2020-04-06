@@ -48,13 +48,7 @@ class DiscogsRelease
   end
 
   def read_tracklist
-    discogs_release_result.tracklist.map do |track|
-      position = track.position
-      artist = build_artists(track.artists)
-      title = track.title
-
-      "#{position}. #{artist} - #{title}"
-    end.join("\n")
+    discogs_release_result.tracklist.map(&method(:build_track_name)).join("\n")
   end
 
   def read_credits
@@ -65,7 +59,19 @@ class DiscogsRelease
     end.join("\n")
   end
 
+  def build_track_name(track)
+      position = track.position
+      artist = build_artists(track.artists)
+      title = track.title
+
+      track_name = "#{position}. "
+      track_name << "#{artist} - " unless artist.nil?
+      track_name << title
+  end
+
   def build_artists(artists)
+    return if artists.nil?
+
     artists.map(&method(:build_joinable_artist)).join(' ')
   end
 

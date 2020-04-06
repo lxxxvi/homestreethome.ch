@@ -10,27 +10,25 @@ class DiscogsReleaseTest < ActiveSupport::TestCase
     assert_equal 'HSH002', release.catalog_number
     assert_equal 'Home Street Home', release.artist
     assert_equal 'We Be To Beat What Key Be To Lock', release.title
-    assert_match expected_image_url_pattern, release.image_url
+    assert_match %r{https://img.discogs.com/.*/R-5835903-1404044169-4898.jpeg.jpg}, release.image_url
     assert_equal Date.new(2014, 6, 28), release.released_on
-    assert_equal expected_tracklist.chomp, release.tracklist
-    assert_equal expected_credits, release.credits
+    assert_equal file_fixture('expected_tracklist_hsh002.txt').read.chomp, release.tracklist
+    assert_equal 'Producer - Samplix', release.credits
   end
 
   test '#to_release for album' do
-    assert false, 'Test where track.artists is not present'
-  end
+    discogs_release_stub(7579828)
 
-  private
+    discogs_release = DiscogsRelease.new(7579828)
 
-  def expected_image_url_pattern
-    %r{https://img.discogs.com/.*/R-5835903-1404044169-4898.jpeg.jpg}
-  end
+    release = discogs_release.to_release
 
-  def expected_tracklist
-    file_fixture('expected_tracklist_hsh002.txt').read
-  end
-
-  def expected_credits
-    'Producer - Samplix'
+    assert_equal 'HSH006', release.catalog_number
+    assert_equal 'Tinu', release.artist
+    assert_equal 'True Fruits', release.title
+    assert_match %r{https://img.discogs.com/.*/R-7579828-1444466549-8708.jpeg.jpg}, release.image_url
+    assert_equal Date.new(2015, 7, 11), release.released_on
+    assert_equal file_fixture('expected_tracklist_hsh006.txt').read.chomp, release.tracklist
+    assert_equal 'Mastered By - Samplix', release.credits
   end
 end
