@@ -26,4 +26,12 @@ class ReleaseTest < ActiveSupport::TestCase
     release.validate
     assert_equal ['has already been taken'], release.errors.messages[:catalog_number]
   end
+
+  test '#sanitize_catalog_number' do
+    release = releases(:bustin)
+
+    release.update(catalog_number: 'HSH    001')
+    release.reload
+    assert_equal 'HSH001', release.catalog_number
+  end
 end
