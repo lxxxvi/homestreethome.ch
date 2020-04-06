@@ -13,6 +13,7 @@ class Admin::Discogs::ReleasesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test '#create with wrong discogs release id' do
+    discogs_label_releases_stubs
     discogs_release_stub(11223344)
     sign_in
 
@@ -23,6 +24,7 @@ class Admin::Discogs::ReleasesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test '#create with non-existent discogs release id' do
+    discogs_label_releases_stubs
     discogs_release_not_found_stub(0)
 
     sign_in

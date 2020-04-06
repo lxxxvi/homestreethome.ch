@@ -12,6 +12,19 @@ class Admin::Discogs::ReleaseForm < ApplicationForm
     @discogs_release_id = params[:discogs_release_id]
   end
 
+  def missing_releases
+    @missing_releases ||= DiscogsLabelReleases.new.missing_releases
+  end
+
+  def missing_releases_options
+    missing_releases.sort_by(&:id).map do |missing_release|
+      option_label = missing_release.artist
+      option_label += " - #{missing_release.title}"
+      option_label += " (#{missing_release.catno})" if missing_release.catno.present?
+      [option_label, missing_release.id]
+    end
+  end
+
   def save
     return unless valid?
 

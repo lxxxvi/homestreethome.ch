@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     namespace :discogs do
       resources :releases, only: %i[new create]
     end
+
+    root to: 'sessions#new'
   end
 
   resources :releases, only: %i[index show], param: :catalog_number

@@ -20,15 +20,16 @@ class ReleasesTest < ApplicationSystemTestCase
   end
 
   test 'creating a Release' do
+    discogs_label_releases_stubs
     discogs_release_stub(5835903)
 
     sign_in
     visit admin_releases_url
-    click_on 'New Release From Discogs'
+    click_on 'Fetch Release From Discogs'
 
-    fill_in 'Discogs Release ID', with: '5835903'
+    select 'We Be To Beat What Key Be To Lock', from: 'Discogs Release'
 
-    click_on 'Create Release'
+    click_on 'Fetch Release From Discogs'
 
     assert_text 'Release was successfully created'
     click_on 'Back'

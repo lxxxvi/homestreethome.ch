@@ -1,7 +1,11 @@
 class Admin::SessionsController < Admin::BaseController
+  include Admin::ApplicationHelper
+
   skip_before_action :authenticate, only: %i[new create destroy]
 
-  def new; end
+  def new
+    redirect_to admin_releases_path if signed_in?
+  end
 
   def create
     if params[:password] == Rails.configuration.admin_password

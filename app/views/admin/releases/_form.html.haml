@@ -9,7 +9,7 @@
         Here you can publish the release. Additionally you may add links to the Download-File or Bandcamp.
       .p-2.pr-0{ class: 'w-2/3' }
         = form_with model: @form do |f|
-          .flex-wrap.mt-4
+          .flex-wrap
             = f.label :bandcamp_url, 'Bandcamp URL', class: 'w-full text-xs text-gray-700 tracking-wider'
             = f.text_field :bandcamp_url, class: 'w-full border border-900 py-1 px-2 rounded', placeholder: '(optional)'
           .flex-wrap.mt-4
@@ -51,4 +51,8 @@
         .flex.flex-wrap.mt-4
           .w-full.text-xs.text-gray-700.tracking-wider Credits
           .w-full
-            .leading-5= @form.object.decorate.display_credits
+            .leading-5
+              - if @form.object.credits.present?
+                = @form.object.decorate.display_credits
+              - else
+                .text-gray-400.text-xs (none)
