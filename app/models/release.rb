@@ -2,6 +2,8 @@ class Release < ApplicationRecord
   validates :discogs_release_id, :catalog_number, :artist, :title, :released_on, :tracklist, presence: true
   validates :discogs_release_id, :catalog_number, uniqueness: true
 
+  before_save :sanitize_catalog_number
+
   scope :published, -> { where.not(published_at: nil) }
   scope :ordered_antichronological, -> { order(released_on: :desc) }
 
@@ -15,5 +17,11 @@ class Release < ApplicationRecord
 
   def to_param
     catalog_number
+  end
+
+  private
+
+  def sanitize_catalog_number
+    self.catalog_number = catalog_number.gsub(/[^[:alnum:]]/, '')
   end
 end

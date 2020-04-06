@@ -5,7 +5,12 @@ module Discogs
     end
 
     def url
-      "https://api.discogs.com/releases/#{@discogs_release_id}?f=json&token=#{Rails.configuration.discogs_token}"
+      [
+        'https://api.discogs.com/releases/',
+        @discogs_release_id,
+        '?f=json&token=',
+        Rails.configuration.discogs[:api_token]
+      ].join
     end
 
     def response_fixture_file_path

@@ -23,6 +23,9 @@ module Homestreethome
     config.action_view.form_with_generates_remote_forms = false
 
     config.admin_password = 'default'
-    config.discogs_token = ENV['DISCOGS_TOKEN']
+    config.discogs = {
+      api_token: ENV['DISCOGS_TOKEN'],
+      home_street_home_label_id: 827644
+    }
   end
 end
