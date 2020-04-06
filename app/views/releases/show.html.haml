@@ -25,6 +25,12 @@
 
   .w-full.mt-10
     .text-gray-500.text-sm.tracking-wider.mb-2 More
-    .my-1= link_to 'Discogs', @release.decorate.discogs_url
+    .my-1
+      = link_to @release.decorate.discogs_url do
+        .w-4.h-4.icon-record-vinyl.inline-block.align-middle
+        .inline-block.ml-1 Discogs
     - if @release.bandcamp_url.present?
-      .my-1= link_to 'Bandcamp', @release.bandcamp_url
+      .my-2
+        = link_to @release.bandcamp_url do
+          .w-4.h-4.icon-bandcamp.inline-block.align-middle
+          .inline-block.ml-1 Bandcamp

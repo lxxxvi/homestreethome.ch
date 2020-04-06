@@ -29,3 +29,15 @@ h1 {
 .danger-button:hover {
   @apply text-white bg-red-600;
 }
+
+.icon-bandcamp {
+  background:
+    url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OTYgNTEyIj48cGF0aCBkPSJNMjQ4IDhDMTExIDggMCAxMTkgMCAyNTZzMTExIDI0OCAyNDggMjQ4IDI0OC0xMTEgMjQ4LTI0OFMzODUgOCAyNDggOHptNDguMiAzMjYuMWgtMTgxTDE5OS45IDE3OGgxODFsLTg0LjcgMTU2LjF6Ii8+PC9zdmc+")
+    no-repeat;
+}
+
+.icon-record-vinyl {
+  background:
+    url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBkPSJNMjU2IDE1MmExMDQgMTA0IDAgMSAwIDEwNCAxMDQgMTA0IDEwNCAwIDAgMC0xMDQtMTA0em0wIDEyOGEyNCAyNCAwIDEgMSAyNC0yNCAyNCAyNCAwIDAgMS0yNCAyNHptMC0yNzJDMTE5IDggOCAxMTkgOCAyNTZzMTExIDI0OCAyNDggMjQ4IDI0OC0xMTEgMjQ4LTI0OFMzOTMgOCAyNTYgOHptMCAzNzZhMTI4IDEyOCAwIDEgMSAxMjgtMTI4IDEyOCAxMjggMCAwIDEtMTI4IDEyOHoiLz48L3N2Zz4=")
+    no-repeat;
+}

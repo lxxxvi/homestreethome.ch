@@ -2,18 +2,21 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no", :name => "viewport"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
     %title Homestreethome
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_pack_tag 'application', media: 'all'
     = javascript_pack_tag 'application'
   %body.bg-gray-100
-    .ml-auto.mr-auto.bg-gray-200.my-20.p-10.shadow-xl.rounded-lg{ class: 'w-1/2' }
+    .ml-auto.mr-auto.bg-gray-200.my-5.md:my-20.p-10.shadow-xl.rounded-lg{ class: 'w-11/12 md:w-1/2' }
       .text-center.font-serif
         .text-3xl.tracking-wider.font-bold.leading-tight.uppercase
-          .text-gray-600.inline Home
-          .text-gray-700.inline Street
-          .text-gray-600.inline Home
+          .text-gray-600.md:inline Home
+          .text-gray-700.md:inline Street
+          .text-gray-600.md:inline Home
         .leading-tight.text-green-400.tracking-widest records
 
         .my-16
