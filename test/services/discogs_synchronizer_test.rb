@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class DiscogsSynchronizerTest < ActiveSupport::TestCase
-  test '#call' do
+  test '#call!' do
     discogs_label_releases_1_to_3_stubs
     discogs_release_stub(5303073) # HSH001
     discogs_release_stub(5835903) # HSH002
@@ -19,7 +19,7 @@ class DiscogsSynchronizerTest < ActiveSupport::TestCase
     )
 
     assert_difference -> { Release.count }, 1, 'should have added HSH003' do
-      DiscogsSynchronizer.new.call
+      DiscogsSynchronizer.new.call!
     end
 
     release.reload
