@@ -3,20 +3,20 @@ class Discogs::LabelRelease
     @label_id = Rails.configuration.discogs[:home_street_home_label_id]
   end
 
-  def label_releases
-    @label_releases ||= fetch_label_releases
+  def all
+    @all ||= fetch_all
   end
 
-  def missing_label_releases
+  def missing
     existing_discogs_release_ids = Release.pluck(:discogs_release_id)
-    label_releases.reject do |release|
+    all.reject do |release|
       existing_discogs_release_ids.include?(release.id)
     end
   end
 
   private
 
-  def fetch_label_releases
+  def fetch_all
     page = 1
     result = DISCOGS_WRAPPER.get_label_releases(@label_id, page: page, per_page: 10)
 

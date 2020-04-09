@@ -13,7 +13,7 @@ class Admin::Discogs::ReleaseForm < ApplicationForm
   end
 
   def missing_label_releases
-    @missing_label_releases ||= Discogs::LabelRelease.new.missing_label_releases
+    @missing_label_releases ||= Discogs::LabelRelease.new.missing
   end
 
   def missing_label_releases_options
