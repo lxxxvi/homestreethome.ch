@@ -13,7 +13,7 @@ class Admin::Discogs::ReleaseForm < ApplicationForm
   end
 
   def missing_label_releases
-    @missing_label_releases ||= DiscogsLabelReleases.new.missing_label_releases
+    @missing_label_releases ||= Discogs::LabelRelease.new.missing_label_releases
   end
 
   def missing_label_releases_options
@@ -35,7 +35,7 @@ class Admin::Discogs::ReleaseForm < ApplicationForm
   private
 
   def discogs_release
-    @discogs_release ||= DiscogsRelease.new(discogs_release_id)
+    @discogs_release ||= Discogs::Release.new(discogs_release_id)
   end
 
   def valid_home_street_home_release

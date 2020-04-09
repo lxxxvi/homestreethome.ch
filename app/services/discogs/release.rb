@@ -1,4 +1,4 @@
-class DiscogsRelease
+class Discogs::Release
   HOME_STREET_HOME_RECORDS_NAME = 'Home Street Home Records'.freeze
 
   def initialize(discogs_release_id)

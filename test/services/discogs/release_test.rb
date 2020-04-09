@@ -1,10 +1,10 @@
 require 'test_helper'
 
-class DiscogsReleaseTest < ActiveSupport::TestCase
+class Discogs::ReleaseTest < ActiveSupport::TestCase
   test '#to_release for compilation' do
     discogs_release_stub(5835903)
 
-    discogs_release = DiscogsRelease.new(5835903)
+    discogs_release = Discogs::Release.new(5835903)
     release = discogs_release.to_release
 
     assert_equal 'HSH002', release.catalog_number
@@ -19,7 +19,7 @@ class DiscogsReleaseTest < ActiveSupport::TestCase
   test '#to_release for album' do
     discogs_release_stub(7579828)
 
-    discogs_release = DiscogsRelease.new(7579828)
+    discogs_release = Discogs::Release.new(7579828)
     release = discogs_release.to_release
 
     assert_equal 'HSH006', release.catalog_number
@@ -34,7 +34,7 @@ class DiscogsReleaseTest < ActiveSupport::TestCase
   test 'release with multiple artist' do
     discogs_release_stub(13167304)
 
-    discogs_release = DiscogsRelease.new(13167304)
+    discogs_release = Discogs::Release.new(13167304)
     release = discogs_release.to_release
 
     assert_equal 'Exist & Samplix', release.artist

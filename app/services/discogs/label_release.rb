@@ -1,4 +1,4 @@
-class DiscogsLabelReleases
+class Discogs::LabelRelease
   def initialize
     @label_id = Rails.configuration.discogs[:home_street_home_label_id]
   end
