@@ -44,7 +44,12 @@ class DiscogsRelease
   end
 
   def read_released_on
-    discogs_release_result.released
+    year, month, day = discogs_release_result.released
+                                             .split('-')
+                                             .map(&:to_i)
+                                             .reject(&:zero?)
+
+    Date.new(year, month || 1, day || 1)
   end
 
   def read_tracklist

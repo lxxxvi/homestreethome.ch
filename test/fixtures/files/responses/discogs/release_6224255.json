@@ -1,0 +1,180 @@
+{
+  "styles": [
+    "Jazzy Hip-Hop"
+  ],
+  "series": [],
+  "labels": [
+    {
+      "name": "Home Street Home Records",
+      "entity_type": "1",
+      "thumbnail_url": "https://img.discogs.com/-QoyznaM-m0T6rJa0oiaRnUq1R4=/fit-in/398x387/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/L-827644-1552592835-3654.gif.jpg",
+      "catno": "HSH003",
+      "resource_url": "https://api.discogs.com/labels/827644",
+      "id": 827644,
+      "entity_type_name": "Label"
+    }
+  ],
+  "year": 2014,
+  "community": {
+    "status": "Accepted",
+    "rating": {
+      "count": 0,
+      "average": 0.0
+    },
+    "have": 0,
+    "contributors": [
+      {
+        "username": "lxxxvi",
+        "resource_url": "https://api.discogs.com/users/lxxxvi"
+      },
+      {
+        "username": "mee55mee",
+        "resource_url": "https://api.discogs.com/users/mee55mee"
+      }
+    ],
+    "want": 0,
+    "submitter": {
+      "username": "lxxxvi",
+      "resource_url": "https://api.discogs.com/users/lxxxvi"
+    },
+    "data_quality": "Needs Vote"
+  },
+  "artists": [
+    {
+      "join": "",
+      "name": "BOD (12)",
+      "anv": "",
+      "tracks": "",
+      "thumbnail_url": "",
+      "role": "",
+      "resource_url": "https://api.discogs.com/artists/4064573",
+      "id": 4064573
+    }
+  ],
+  "images": [
+    {
+      "uri": "https://img.discogs.com/mMXYQVsQIQ0zAGWkQc1Cz7u8VTg=/fit-in/600x595/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-6224255-1414145766-7622.jpeg.jpg",
+      "height": 595,
+      "width": 600,
+      "resource_url": "https://img.discogs.com/mMXYQVsQIQ0zAGWkQc1Cz7u8VTg=/fit-in/600x595/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-6224255-1414145766-7622.jpeg.jpg",
+      "type": "primary",
+      "uri150": "https://img.discogs.com/tFP36frSykWRz5EY6Wkpx3oWcg4=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-6224255-1414145766-7622.jpeg.jpg"
+    },
+    {
+      "uri": "https://img.discogs.com/Gf4Oa1_z6wq1kuf-pHrFXLMuDS4=/fit-in/600x595/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-6224255-1414145766-4314.jpeg.jpg",
+      "height": 595,
+      "width": 600,
+      "resource_url": "https://img.discogs.com/Gf4Oa1_z6wq1kuf-pHrFXLMuDS4=/fit-in/600x595/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-6224255-1414145766-4314.jpeg.jpg",
+      "type": "secondary",
+      "uri150": "https://img.discogs.com/XDDyg433bnuZxKebMex1D2CBUYA=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-6224255-1414145766-4314.jpeg.jpg"
+    }
+  ],
+  "format_quantity": 0,
+  "id": 6224255,
+  "artists_sort": "BOD (12)",
+  "genres": [
+    "Hip Hop"
+  ],
+  "thumb": "https://img.discogs.com/tFP36frSykWRz5EY6Wkpx3oWcg4=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-6224255-1414145766-7622.jpeg.jpg",
+  "num_for_sale": 0,
+  "title": "Chue Ide Stube EP",
+  "date_changed": "2015-07-20T03:39:34-07:00",
+  "lowest_price": null,
+  "status": "Accepted",
+  "released_formatted": "Oct 2014",
+  "released": "2014-10-00",
+  "date_added": "2014-10-24T03:16:04-07:00",
+  "tracklist": [
+    {
+      "duration": "3:11",
+      "position": "1",
+      "type_": "track",
+      "title": "BOD"
+    },
+    {
+      "duration": "2:48",
+      "position": "2",
+      "type_": "track",
+      "title": "Beats Und Raps"
+    },
+    {
+      "duration": "3:27",
+      "position": "3",
+      "type_": "track",
+      "title": "Kei Chraft"
+    },
+    {
+      "duration": "4:14",
+      "position": "4",
+      "type_": "track",
+      "extraartists": [
+        {
+          "join": "",
+          "name": "Chilli Mari",
+          "anv": "",
+          "tracks": "",
+          "thumbnail_url": "",
+          "role": "Featuring",
+          "resource_url": "https://api.discogs.com/artists/4064574",
+          "id": 4064574
+        }
+      ],
+      "title": "Chue Ide Stube"
+    },
+    {
+      "duration": "3:48",
+      "position": "5",
+      "type_": "track",
+      "title": "De Geilscht"
+    },
+    {
+      "duration": "2:53",
+      "position": "6",
+      "type_": "track",
+      "extraartists": [
+        {
+          "join": "",
+          "name": "Malo (16)",
+          "anv": "",
+          "tracks": "",
+          "thumbnail_url": "",
+          "role": "Featuring",
+          "resource_url": "https://api.discogs.com/artists/4031448",
+          "id": 4031448
+        }
+      ],
+      "title": "Was Bliebt"
+    },
+    {
+      "duration": "3:44",
+      "position": "7",
+      "type_": "track",
+      "title": "Heiweh"
+    },
+    {
+      "duration": "3:02",
+      "position": "8",
+      "type_": "track",
+      "title": "Capdigger"
+    }
+  ],
+  "extraartists": [],
+  "country": "Switzerland",
+  "identifiers": [],
+  "companies": [],
+  "uri": "https://www.discogs.com/BOD-Chue-Ide-Stube-EP/release/6224255",
+  "formats": [
+    {
+      "descriptions": [
+        "MP3",
+        "Album",
+        "EP",
+        "Stereo"
+      ],
+      "name": "File",
+      "qty": "8"
+    }
+  ],
+  "resource_url": "https://api.discogs.com/releases/6224255",
+  "data_quality": "Needs Vote"
+}
