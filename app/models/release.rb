@@ -4,6 +4,8 @@ class Release < ApplicationRecord
 
   before_save :sanitize_catalog_number
 
+  scope :active, -> { where(archived_at: nil) }
+  scope :archived, -> { where.not(archived_at: nil) }
   scope :published, -> { where.not(published_at: nil) }
   scope :ordered_antichronological, -> { order(released_on: :desc) }
 
@@ -17,6 +19,10 @@ class Release < ApplicationRecord
 
   def to_param
     catalog_number
+  end
+
+  def archive!
+    update!(archived_at: Time.zone.now)
   end
 
   private

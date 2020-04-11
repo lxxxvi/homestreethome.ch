@@ -34,4 +34,20 @@ class ReleaseTest < ActiveSupport::TestCase
     release.reload
     assert_equal 'HSH001', release.catalog_number
   end
+
+  test '.active and .archived' do
+    release = releases(:bustin)
+
+    assert_difference -> { Release.active.count }, -1 do
+      assert_difference -> { Release.archived.count }, 1 do
+        release.archive!
+      end
+    end
+
+    assert_difference -> { Release.archived.count }, -1 do
+      assert_difference -> { Release.active.count }, 1 do
+        release.update!(archived_at: nil)
+      end
+    end
+  end
 end
