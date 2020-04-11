@@ -2,7 +2,7 @@ class Admin::ReleasesController < Admin::BaseController
   before_action :set_release, only: %i[edit update destroy]
 
   def index
-    @releases = Release.ordered_antichronological
+    @releases = Release.active.ordered_antichronological
   end
 
   def edit
@@ -20,8 +20,8 @@ class Admin::ReleasesController < Admin::BaseController
   end
 
   def destroy
-    @release.destroy
-    redirect_to admin_releases_url, notice: 'Release was successfully destroyed.'
+    @release.archive!
+    redirect_to admin_releases_url, notice: 'Release was successfully archived.'
   end
 
   private

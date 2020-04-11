@@ -25,7 +25,7 @@ class Admin::ReleasesControllerTest < ActionDispatch::IntegrationTest
 
   test 'should destroy release' do
     sign_in
-    assert_difference('Release.count', -1) do
+    assert_difference('Release.archived.count', 1) do
       delete admin_release_path(@release)
     end
 

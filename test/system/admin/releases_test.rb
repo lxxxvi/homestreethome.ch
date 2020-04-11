@@ -1,6 +1,6 @@
 require 'application_system_test_case'
 
-class ReleasesTest < ApplicationSystemTestCase
+class Admin::ReleasesTest < ApplicationSystemTestCase
   setup do
     @release = releases(:bustin)
   end
@@ -49,12 +49,15 @@ class ReleasesTest < ApplicationSystemTestCase
     click_on 'Back'
   end
 
-  test 'destroying a Release' do
+  test 'archiving a Release' do
     sign_in
     visit admin_releases_url
-    click_on 'Edit', match: :first
-    click_on 'Delete release'
 
-    assert_text 'Release was successfully destroyed'
+    assert_changes -> { find_all('table tbody tr').count }, -1 do
+      click_on 'Edit', match: :first
+      click_on 'Archive release'
+
+      assert_text 'Release was successfully archived.'
+    end
   end
 end
