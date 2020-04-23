@@ -2,6 +2,7 @@
   "name": "homestreethome",
   "private": true,
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.2",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "^5.0.1",
