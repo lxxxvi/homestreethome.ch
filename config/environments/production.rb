@@ -1,5 +1,5 @@
 Rails.application.configure do
-  config.admin_password = ENV['HOMESTREETHOME_ADMIN_PASSWORD'] || raise
+  config.admin_password = ENV['HOMESTREETHOME_ADMIN_PASSWORD'] || raise 'please set HOMESTREETHOME_ADMIN_PASSWORD'
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.

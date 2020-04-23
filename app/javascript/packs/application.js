@@ -17,3 +17,13 @@ require("@rails/activestorage").start()
 import "controllers"
 
 require("css/application.scss")
+
+document.addEventListener("DOMContentLoaded", function(){
+  Array.from(document.querySelectorAll('[data-url]')).forEach((element) => {
+    element.addEventListener('click', (event) => {
+      window.location.href = element.dataset.url;
+    });
+  });
+});
+
+
