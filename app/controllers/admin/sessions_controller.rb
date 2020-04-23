@@ -8,7 +8,7 @@ class Admin::SessionsController < Admin::BaseController
   end
 
   def create
-    if params[:password] == Rails.configuration.admin_password
+    if params[:password].present? && params[:password] == Rails.configuration.admin_password
       sign_in
       redirect_to admin_releases_path
     else
