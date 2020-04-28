@@ -1,0 +1,58 @@
+
+.my-10
+  .rounded-lg.border.shadow-xl.p-4.bg-white
+    .flex.mb-3.pb-1.border-b
+      .w-full
+        .text-green-900.tracking-wide Edit data
+    .flex
+      .text-gray-500.p-2.pl-0.text-sm{ class: 'w-1/3' }
+        Here you can publish the release. Additionally you may add links to the Download-File or Bandcamp.
+      .p-2.pr-0{ class: 'w-2/3' }
+        = form_with model: @form do |f|
+          .flex-wrap
+            = f.label :bandcamp_url, 'Bandcamp URL', class: 'w-full text-xs text-gray-700 tracking-wider'
+            = f.text_field :bandcamp_url, class: 'w-full border border-900 py-1 px-2 rounded', placeholder: '(optional)'
+          .flex-wrap.mt-4
+            = f.label :published, 'Published?', class: 'w-full text-xs text-gray-700 tracking-wider'
+            .block.py-1= f.check_box :published
+          .actions.mt-5
+            = f.submit nil, class: 'button'
+
+.my-10
+  .rounded-lg.border.shadow-xl.p-4.bg-white
+    .flex.mb-3.pb-1.border-b
+      .w-full
+        .text-green-900.tracking-wide Data from Discogs
+    .flex
+      .text-gray-500.p-2.pl-0.text-sm{ class: 'w-1/3' }
+        This data is automatically fetched from Discogs. Editing is disabled.
+      .p-2.pr-0{ class: 'w-2/3' }
+        .flex.flex-wrap
+          .w-full.text-xs.text-gray-700.tracking-wider Discogs Release ID
+          .w-full
+            .leading-5= @form.object.discogs_release_id
+        .flex.flex-wrap.mt-4
+          .w-full.text-xs.text-gray-700.tracking-wider Catalog Number
+          .w-full
+            .leading-5= @form.object.catalog_number
+        .flex.flex-wrap.mt-4
+          .w-full.text-xs.text-gray-700.tracking-wider Artist
+          .w-full
+            .leading-5= @form.object.artist
+        .flex.flex-wrap.mt-4
+          .w-full.text-xs.text-gray-700.tracking-wider Title
+          .w-full
+            .leading-5= @form.object.title
+        .flex.flex-wrap.mt-4
+          .w-full.text-xs.text-gray-700.tracking-wider Tracklist
+          .w-full
+            .leading-5.my-2= @form.object.decorate.display_tracklist
+
+        .flex.flex-wrap.mt-4
+          .w-full.text-xs.text-gray-700.tracking-wider Credits
+          .w-full
+            .leading-5
+              - if @form.object.credits.present?
+                = @form.object.decorate.display_credits
+              - else
+                .text-gray-400.text-xs (none)

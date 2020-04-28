@@ -1,0 +1,479 @@
+{
+  "styles": [
+    "Instrumental",
+    "Hip Hop"
+  ],
+  "series": [],
+  "labels": [
+    {
+      "name": "Home Street Home Records",
+      "entity_type": "1",
+      "thumbnail_url": "https://img.discogs.com/-QoyznaM-m0T6rJa0oiaRnUq1R4=/fit-in/398x387/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/L-827644-1552592835-3654.gif.jpg",
+      "catno": "HSH001",
+      "resource_url": "https://api.discogs.com/labels/827644",
+      "id": 827644,
+      "entity_type_name": "Label"
+    }
+  ],
+  "year": 2014,
+  "community": {
+    "status": "Accepted",
+    "rating": {
+      "count": 0,
+      "average": 0.0
+    },
+    "have": 1,
+    "contributors": [
+      {
+        "username": "lxxxvi",
+        "resource_url": "https://api.discogs.com/users/lxxxvi"
+      },
+      {
+        "username": "disruptive-influence",
+        "resource_url": "https://api.discogs.com/users/disruptive-influence"
+      }
+    ],
+    "want": 0,
+    "submitter": {
+      "username": "lxxxvi",
+      "resource_url": "https://api.discogs.com/users/lxxxvi"
+    },
+    "data_quality": "Needs Vote"
+  },
+  "artists": [
+    {
+      "join": "",
+      "name": "Home Street Home",
+      "anv": "",
+      "tracks": "",
+      "thumbnail_url": "https://img.discogs.com/3tsWy0d-1myc2ZWweCcohwSEvN0=/600x560/smart/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/A-3646852-1404052613-8930.jpeg.jpg",
+      "role": "",
+      "resource_url": "https://api.discogs.com/artists/3646852",
+      "id": 3646852
+    }
+  ],
+  "images": [
+    {
+      "uri": "https://img.discogs.com/SlP3Jv__QidbPP3uWdDLYB-l4Sc=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-5303073-1390056310-2222.jpeg.jpg",
+      "height": 600,
+      "width": 600,
+      "resource_url": "https://img.discogs.com/SlP3Jv__QidbPP3uWdDLYB-l4Sc=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-5303073-1390056310-2222.jpeg.jpg",
+      "type": "primary",
+      "uri150": "https://img.discogs.com/RxN04JCQ979SZrcqfd35X9lIBzc=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-5303073-1390056310-2222.jpeg.jpg"
+    }
+  ],
+  "format_quantity": 1,
+  "id": 5303073,
+  "artists_sort": "Home Street Home",
+  "genres": [
+    "Electronic",
+    "Hip Hop"
+  ],
+  "thumb": "https://img.discogs.com/RxN04JCQ979SZrcqfd35X9lIBzc=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-5303073-1390056310-2222.jpeg.jpg",
+  "num_for_sale": 1,
+  "title": "Bustin' Through The Ceiling",
+  "date_changed": "2015-04-06T05:28:03-07:00",
+  "lowest_price": 12.65,
+  "status": "Accepted",
+  "released_formatted": "01 Feb 2014",
+  "estimated_weight": 85,
+  "released": "2014-02-01",
+  "date_added": "2014-01-18T07:28:03-08:00",
+  "tracklist": [
+    {
+      "duration": "0:51",
+      "position": "1",
+      "type_": "track",
+      "title": "Intro (Bustin')",
+      "artists": [
+        {
+          "join": "&",
+          "name": "Samplix",
+          "anv": "",
+          "tracks": "",
+          "thumbnail_url": "",
+          "role": "",
+          "resource_url": "https://api.discogs.com/artists/3646850",
+          "id": 3646850
+        },
+        {
+          "join": "",
+          "name": "DJ 4tex",
+          "anv": "",
+          "tracks": "",
+          "thumbnail_url": "",
+          "role": "",
+          "resource_url": "https://api.discogs.com/artists/3646847",
+          "id": 3646847
+        }
+      ]
+    },
+    {
+      "duration": "2:19",
+      "position": "2",
+      "type_": "track",
+      "title": "Cats Are Still Local",
+      "artists": [
+        {
+          "join": "",
+          "name": "Soulcrash (2)",
+          "anv": "",
+          "tracks": "",
+          "thumbnail_url": "",
+          "role": "",
+          "resource_url": "https://api.discogs.com/artists/3646846",
+          "id": 3646846
+        }
+      ]
+    },
+    {
+      "duration": "2:54",
+      "position": "3",
+      "type_": "track",
+      "title": "Sidetrack",
+      "artists": [
+        {
+          "join": "",
+          "name": "ill Figure (3)",
+          "anv": "",
+          "tracks": "",
+          "thumbnail_url": "",
+          "role": "",
+          "resource_url": "https://api.discogs.com/artists/3565285",
+          "id": 3565285
+        }
+      ]
+    },
+    {
+      "duration": "3:22",
+      "position": "4",
+      "type_": "track",
+      "title": "Ned Ohni Beats",
+      "artists": [
+        {
+          "join": "",
+          "name": "Knut Butter",
+          "anv": "",
+          "tracks": "",
+          "thumbnail_url": "",
+          "role": "",
+          "resource_url": "https://api.discogs.com/artists/3646848",
+          "id": 3646848
+        }
+      ]
+    },
+    {
+      "duration": "3:30",
+      "position": "5",
+      "type_": "track",
+      "title": "Never Gonna Tell",
+      "artists": [
+        {
+          "join": "",
+          "name": "ill Figure (3)",
+          "anv": "",
+          "tracks": "",
+          "thumbnail_url": "",
+          "role": "",
+          "resource_url": "https://api.discogs.com/artists/3565285",
+          "id": 3565285
+        }
+      ]
+    },
+    {
+      "duration": "2:09",
+      "position": "6",
+      "type_": "track",
+      "title": "Scheissregal",
+      "artists": [
+        {
+          "join": "",
+          "name": "Nepomuk (2)",
+          "anv": "",
+          "tracks": "",
+          "thumbnail_url": "",
+          "role": "",
+          "resource_url": "https://api.discogs.com/artists/3646854",
+          "id": 3646854
+        }
+      ]
+    },
+    {
+      "duration": "2:03",
+      "position": "7",
+      "type_": "track",
+      "title": "Tatum's Art",
+      "artists": [
+        {
+          "join": "",
+          "name": "Bustle Frog",
+          "anv": "",
+          "tracks": "",
+          "thumbnail_url": "",
+          "role": "",
+          "resource_url": "https://api.discogs.com/artists/3598319",
+          "id": 3598319
+        }
+      ]
+    },
+    {
+      "duration": "2:58",
+      "position": "8",
+      "type_": "track",
+      "title": "Mind Peace",
+      "artists": [
+        {
+          "join": "",
+          "name": "Soulcrash (2)",
+          "anv": "",
+          "tracks": "",
+          "thumbnail_url": "",
+          "role": "",
+          "resource_url": "https://api.discogs.com/artists/3646846",
+          "id": 3646846
+        }
+      ]
+    },
+    {
+      "duration": "3:16",
+      "position": "9",
+      "type_": "track",
+      "title": "Rollin' Jo's",
+      "artists": [
+        {
+          "join": "",
+          "name": "Bustle Frog",
+          "anv": "",
+          "tracks": "",
+          "thumbnail_url": "",
+          "role": "",
+          "resource_url": "https://api.discogs.com/artists/3598319",
+          "id": 3598319
+        }
+      ]
+    },
+    {
+      "duration": "1:55",
+      "position": "10",
+      "type_": "track",
+      "title": "Drum Diary",
+      "artists": [
+        {
+          "join": "",
+          "name": "Rob Chop The Vinylator",
+          "anv": "",
+          "tracks": "",
+          "thumbnail_url": "",
+          "role": "",
+          "resource_url": "https://api.discogs.com/artists/3646851",
+          "id": 3646851
+        }
+      ]
+    },
+    {
+      "duration": "3:07",
+      "position": "11",
+      "type_": "track",
+      "title": "Galaxy War",
+      "artists": [
+        {
+          "join": "",
+          "name": "Samplix",
+          "anv": "",
+          "tracks": "",
+          "thumbnail_url": "",
+          "role": "",
+          "resource_url": "https://api.discogs.com/artists/3646850",
+          "id": 3646850
+        }
+      ]
+    },
+    {
+      "duration": "1:38",
+      "position": "12",
+      "type_": "track",
+      "title": "Suech Der Es Hobby",
+      "artists": [
+        {
+          "join": "",
+          "name": "Knut Butter",
+          "anv": "",
+          "tracks": "",
+          "thumbnail_url": "",
+          "role": "",
+          "resource_url": "https://api.discogs.com/artists/3646848",
+          "id": 3646848
+        }
+      ]
+    },
+    {
+      "duration": "0:47",
+      "position": "13",
+      "type_": "track",
+      "title": "Un-there Ground",
+      "artists": [
+        {
+          "join": "",
+          "name": "Nepomuk (2)",
+          "anv": "",
+          "tracks": "",
+          "thumbnail_url": "",
+          "role": "",
+          "resource_url": "https://api.discogs.com/artists/3646854",
+          "id": 3646854
+        }
+      ]
+    },
+    {
+      "duration": "1:53",
+      "position": "14",
+      "type_": "track",
+      "title": "Youngblood",
+      "artists": [
+        {
+          "join": "",
+          "name": "Tinu (2)",
+          "anv": "",
+          "tracks": "",
+          "thumbnail_url": "",
+          "role": "",
+          "resource_url": "https://api.discogs.com/artists/3646853",
+          "id": 3646853
+        }
+      ]
+    },
+    {
+      "duration": "2:40",
+      "position": "15",
+      "type_": "track",
+      "title": "Morge Am Zwei Seit",
+      "artists": [
+        {
+          "join": "",
+          "name": "slik nik (2)",
+          "anv": "",
+          "tracks": "",
+          "thumbnail_url": "https://img.discogs.com/z42CvTmhHCVtj7Zj2zKBsiSK8KY=/600x450/smart/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/A-3646849-1410659230-5766.jpeg.jpg",
+          "role": "",
+          "resource_url": "https://api.discogs.com/artists/3646849",
+          "id": 3646849
+        }
+      ]
+    },
+    {
+      "duration": "3:05",
+      "position": "16",
+      "type_": "track",
+      "title": "Verreckte Chaib",
+      "artists": [
+        {
+          "join": "",
+          "name": "Tinu (2)",
+          "anv": "",
+          "tracks": "",
+          "thumbnail_url": "",
+          "role": "",
+          "resource_url": "https://api.discogs.com/artists/3646853",
+          "id": 3646853
+        }
+      ]
+    },
+    {
+      "duration": "2:52",
+      "position": "17",
+      "type_": "track",
+      "title": "Lonely",
+      "artists": [
+        {
+          "join": "",
+          "name": "Samplix",
+          "anv": "",
+          "tracks": "",
+          "thumbnail_url": "",
+          "role": "",
+          "resource_url": "https://api.discogs.com/artists/3646850",
+          "id": 3646850
+        }
+      ]
+    },
+    {
+      "duration": "1:29",
+      "position": "18",
+      "type_": "track",
+      "title": "Irumu",
+      "artists": [
+        {
+          "join": "",
+          "name": "slik nik (2)",
+          "anv": "",
+          "tracks": "",
+          "thumbnail_url": "https://img.discogs.com/z42CvTmhHCVtj7Zj2zKBsiSK8KY=/600x450/smart/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/A-3646849-1410659230-5766.jpeg.jpg",
+          "role": "",
+          "resource_url": "https://api.discogs.com/artists/3646849",
+          "id": 3646849
+        }
+      ]
+    },
+    {
+      "duration": "2:38",
+      "position": "19",
+      "type_": "track",
+      "title": "Egypt's Land",
+      "artists": [
+        {
+          "join": "",
+          "name": "Rob Chop The Vinylator",
+          "anv": "",
+          "tracks": "",
+          "thumbnail_url": "",
+          "role": "",
+          "resource_url": "https://api.discogs.com/artists/3646851",
+          "id": 3646851
+        }
+      ]
+    },
+    {
+      "duration": "1:56",
+      "position": "20",
+      "type_": "track",
+      "title": "Outro (See You Soon)",
+      "artists": [
+        {
+          "join": "",
+          "name": "ill Figure (3)",
+          "anv": "",
+          "tracks": "",
+          "thumbnail_url": "",
+          "role": "",
+          "resource_url": "https://api.discogs.com/artists/3565285",
+          "id": 3565285
+        }
+      ]
+    }
+  ],
+  "extraartists": [],
+  "country": "Switzerland",
+  "notes": "Mixing and Mastering: Samplix\r\nArtwork: Ruby + Irma\r\n\r\nhttp://www.homestreethome.ch\r\nhttps://soundcloud.com/home-street-home-beatz\r\nhttp://home-street-home-beatz.bandcamp.com\r\nhttps://www.facebook.com/pages/Home-Street-Home-Vinylz/116269118459058",
+  "identifiers": [],
+  "companies": [],
+  "uri": "https://www.discogs.com/Home-Street-Home-Bustin-Through-The-Ceiling/release/5303073",
+  "formats": [
+    {
+      "descriptions": [
+        "Compilation"
+      ],
+      "name": "CD",
+      "qty": "1"
+    },
+    {
+      "descriptions": [
+        "MP3"
+      ],
+      "text": "192 kbps",
+      "name": "File",
+      "qty": "20"
+    }
+  ],
+  "resource_url": "https://api.discogs.com/releases/5303073",
+  "data_quality": "Needs Vote"
+}

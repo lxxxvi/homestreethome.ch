@@ -1,0 +1,74 @@
+{
+  "pagination": {
+    "per_page": 10,
+    "items": 3,
+    "page": 1,
+    "urls": {},
+    "pages": 1
+  },
+  "releases": [
+    {
+      "status": "Accepted",
+      "artist": "Home Street Home",
+      "catno": "HSH001",
+      "thumb": "https://img.discogs.com/RxN04JCQ979SZrcqfd35X9lIBzc=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-5303073-1390056310-2222.jpeg.jpg",
+      "format": "CD, Comp + 20xFile, MP3, 192",
+      "stats": {
+        "user": {
+          "in_collection": 0,
+          "in_wantlist": 0
+        },
+        "community": {
+          "in_collection": 1,
+          "in_wantlist": 0
+        }
+      },
+      "resource_url": "https://api.discogs.com/releases/5303073",
+      "title": "Bustin' Through The Ceiling",
+      "year": 2014,
+      "id": 5303073
+    },
+    {
+      "status": "Accepted",
+      "artist": "Home Street Home",
+      "catno": "HSH002",
+      "thumb": "https://img.discogs.com/6vmKRbKdY2Mqo1g-QfV0wa1V1bg=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-5835903-1404044169-4898.jpeg.jpg",
+      "format": "CD, Comp + 19xFile, MP3, 320",
+      "stats": {
+        "user": {
+          "in_collection": 0,
+          "in_wantlist": 0
+        },
+        "community": {
+          "in_collection": 1,
+          "in_wantlist": 0
+        }
+      },
+      "resource_url": "https://api.discogs.com/releases/5835903",
+      "title": "We Be To Beat What Key Be To Lock",
+      "year": 2014,
+      "id": 5835903
+    },
+    {
+      "status": "Accepted",
+      "artist": "BOD (12)",
+      "catno": "HSH003",
+      "thumb": "https://img.discogs.com/tFP36frSykWRz5EY6Wkpx3oWcg4=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-6224255-1414145766-7622.jpeg.jpg",
+      "format": "8xFile, MP3, Album, EP",
+      "stats": {
+        "user": {
+          "in_collection": 0,
+          "in_wantlist": 0
+        },
+        "community": {
+          "in_collection": 0,
+          "in_wantlist": 0
+        }
+      },
+      "resource_url": "https://api.discogs.com/releases/6224255",
+      "title": "Chue Ide Stube EP",
+      "year": 2014,
+      "id": 6224255
+    }
+  ]
+}

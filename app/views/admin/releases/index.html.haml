@@ -1,0 +1,39 @@
+.my-10
+  %h1 Releases
+
+.my-10
+  = link_to 'Fetch Release From Discogs', new_admin_discogs_release_path, class: 'button'
+
+.flex.flex-col
+  .-my-2.pt-2.pb-10.overflow-x-auto.sm:-mx-6.sm:px-6.lg:-mx-8.lg:px-8
+    .align-middle.inline-block.min-w-full.overflow-hidden.sm:rounded-lg.shadow-xl
+      %table.min-w-full
+        %thead
+          %tr.text-left.text-xs.tracking-widest.uppercase.text-green-900
+            %th.px-6.py-3.border-b.border-green-200.bg-green-100.text-left.text-xs.leading-4.font-medium.text-green-500.uppercase.tracking-wider
+            %th.px-6.py-3.border-b.border-green-200.bg-green-100.text-left.text-xs.leading-4.font-medium.text-green-500.uppercase.tracking-wider Artist / Title
+            %th.px-6.py-3.border-b.border-green-200.bg-green-100.text-center.text-xs.leading-4.font-medium.text-green-500.uppercase.tracking-wider Status
+            %th.px-6.py-3.border-b.border-green-200.bg-green-100
+
+        %tbody.bg-white
+          - @releases.each do |release|
+            %tr
+              %td.px-6.py-4.whitespace-no-wrap.border-b.border-green-200
+                .flex.items-center
+                  .flex-shrink-0.h-10.w-10
+                    = image_tag release.image_url, class: 'h-10 w-10'
+              %td.px-6.py-4.whitespace-no-wrap.border-b.border-green-200
+                .text-sm.leading-5.text-gray-400= release.artist
+                .leading-5
+                  .text-gray-900.inline= release.title
+                  .text-xs.text-green-400.tracking-wider.inline.ml-1.pl-1= release.catalog_number
+
+              %td.px-6.py-4.whitespace-no-wrap.border-b.border-green-200.text-center
+                - if release.published?
+                  .px-2.inline-flex.text-xs.leading-5.font-semibold.rounded-full.bg-green-100.text-green-800
+                    Published
+                - else
+                  .px-2.inline-flex.text-xs.leading-5.font-semibold.rounded-full.bg-indigo-100.text-indigo-800
+                    Draft
+              %td.px-6.py-4.whitespace-no-wrap.border-b.border-green-200.text-right
+                = link_to 'Edit', edit_admin_release_path(release)
