@@ -1,24 +1,58 @@
-# README
+# records.homestreethome.ch
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the [Rails](https://rubyonrails.org/) project to the Home Street Home music label's webpage [https://records.homestreethome.ch]().
+We  manage our records on Discogs, this project takes the data from there and displays it.
 
-Things you may want to cover:
+## Prerequisites
 
-* Ruby version
+* Ruby (see version in `./ruby-version`)
+* Postgres
+* Node (`>= 12`)
+* Yarn
 
-* System dependencies
+## Setup
 
-* Configuration
+```shell
+bin/setup
+```
 
-* Database creation
+## Tests
 
-* Database initialization
+```shell
+bin/test
+```
 
-* How to run the test suite
+## Run locally
 
-* Services (job queues, cache servers, search engines, etc.)
+### Discogs Token
 
-* Deployment instructions
+Set an environment variable named `DISCOGS_TOKEN`, assign a valid Discogs Token.
+You need to use your personal token, it's free. You simply have to have/create an account on Discogs.
+Your personal Discogs token can then be obtained [here](https://www.discogs.com/settings/developers).
 
-* ...
+```shell
+export DISCOGS_TOKEN=[...your-token...]
+```
+
+### Start server
+
+```shell
+bin/rails s
+```
+
+#### Start webpack-dev-server (optional)
+
+To watch and compile JavaScript and CSS changes as the server is running you may want to run `webpack-dev-server` in a **separate** session.
+
+```shel
+bin/webpack-dev-server
+```
+
+### Synchronize Discogs
+
+There's a rake task that fetches data from Discogs and stores it in the local database.
+This only works if you have your `DISCOGS_TOKEN` configured (see above).
+
+```shell
+bin/rails discogs:synchronize
+```
