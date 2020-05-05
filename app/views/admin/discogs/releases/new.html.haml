@@ -3,9 +3,9 @@
   = link_to 'Back to releases', admin_releases_path, class: 'ml-2 text-gray-500 text-sm'
 
 .rounded-lg.border.border-gray-200.shadow-xl.bg-white.p-8
-  .my-4
-    - if @form.missing_label_releases_options.any?
-      = form_with model: @form do |f|
+  = form_with model: @form do |f|
+    .my-4
+      - if @form.missing_label_releases_options.any?
         .field
           = f.label :discogs_release_id, 'Discogs Release', class: 'block text-sm leading-5 tracking-wide text-gray-600'
           = f.select :discogs_release_id,
@@ -16,7 +16,18 @@
             .text-red-400.text-xs.mt-1
               = @form.errors.messages[:discogs_release_id].join(' and ')
 
-        .actions.mt-6
-          = f.submit 'Fetch Release From Discogs', class: 'button'
-    - else
-      .text-center.text-gray-700 Could not find any releases on Discogs that are not in our database yet.
+      - else
+        .text-gray-700
+          Could not find any releases on Discogs API that are not in our database yet.
+          \
+          You can still add a release manually below.
+
+      .my-4
+        = f.label :manual_discogs_release_id, 'Manual Discogs Release ID', class: 'block text-sm leading-5 tracking-wide text-gray-600'
+        = f.text_field :manual_discogs_release_id,
+                       class: 'py-2 px-2 rounded border sm:text-sm sm:leading-5'
+        .text-gray-500.text-xs Use this field if the release does not appear in the dropdown above, or there is no dropdown.
+
+      .actions.mt-6
+        = f.submit 'Fetch Release From Discogs', class: 'button'
+

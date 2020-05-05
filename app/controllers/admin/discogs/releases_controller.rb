@@ -16,6 +16,6 @@ class Admin::Discogs::ReleasesController < Admin::BaseController
   private
 
   def admin_discogs_release_params
-    params.require(:admin_discogs_release).permit(:discogs_release_id)
+    params.require(:admin_discogs_release).permit(:discogs_release_id, :manual_discogs_release_id)
   end
 end

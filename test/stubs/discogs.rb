@@ -1,10 +1,15 @@
 require 'stubs/discogs/base_stub'
 require 'stubs/discogs/label_releases_stub'
 require 'stubs/discogs/label_releases_1_to_3_stub'
+require 'stubs/discogs/label_no_new_release_stub'
 require 'stubs/discogs/release_stub'
 require 'stubs/discogs/release_not_found_stub'
 
 module DiscogsStubs
+  def discogs_label_no_new_release_stub
+    to_stub(Discogs::LabelNoNewReleaseStub.new.stub_struct)
+  end
+
   def discogs_label_releases_stubs
     to_stub(Discogs::LabelReleasesStub.new(page: 1).stub_struct)
     to_stub(Discogs::LabelReleasesStub.new(page: 2).stub_struct)

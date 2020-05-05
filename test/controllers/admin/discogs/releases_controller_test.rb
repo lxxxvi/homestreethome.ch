@@ -8,6 +8,19 @@ class Admin::Discogs::ReleasesControllerTest < ActionDispatch::IntegrationTest
     assert_difference -> { Release.count }, 1 do
       post admin_discogs_releases_path, params: { admin_discogs_release: { discogs_release_id: 5835903 } }
     end
+
+    follow_redirect!
+    assert_response :success
+  end
+
+  test '#create with manual release id' do
+    discogs_release_stub(5835903)
+    sign_in
+
+    assert_difference -> { Release.count }, 1 do
+      post admin_discogs_releases_path, params: { admin_discogs_release: { manual_discogs_release_id: 5835903 } }
+    end
+
     follow_redirect!
     assert_response :success
   end

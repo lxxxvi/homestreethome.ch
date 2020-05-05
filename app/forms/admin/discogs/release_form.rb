@@ -9,7 +9,7 @@ class Admin::Discogs::ReleaseForm < ApplicationForm
     @object = object
     @params = params
 
-    @discogs_release_id = params[:discogs_release_id]
+    @discogs_release_id = params[:discogs_release_id].presence || params[:manual_discogs_release_id].presence
   end
 
   def missing_label_releases

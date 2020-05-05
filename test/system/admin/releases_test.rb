@@ -35,6 +35,29 @@ class Admin::ReleasesTest < ApplicationSystemTestCase
     click_on 'Back'
   end
 
+  test 'creating a Release by providing the release id manually' do
+    discogs_label_releases_stubs
+    discogs_release_stub(5835903)
+
+    sign_in
+    click_on 'Fetch Release From Discogs'
+
+    fill_in 'Manual Discogs Release ID', with: '5835903'
+    click_on 'Fetch Release From Discogs'
+
+    assert_text 'Release was successfully created'
+    click_on 'Back'
+  end
+
+  test 'displays manual discogs release id input field, even if API returns none' do
+    discogs_label_no_new_release_stub
+    sign_in
+    click_on 'Fetch Release From Discogs'
+
+    assert has_field? 'Manual Discogs Release ID', type: 'text'
+    assert_not has_field? 'Discogs Release', type: 'text', exact: true
+  end
+
   test 'updating a Release' do
     sign_in
     visit admin_releases_url
