@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+
+h1 {
+  /*word-spacing: 10000px;*/
+}
+@tailwind utilities;
