@@ -11,7 +11,5 @@ Rails.application.routes.draw do
     root to: 'sessions#new'
   end
 
-  resources :releases, only: %i[index show], param: :catalog_number
-
   root to: 'releases#index'
 end

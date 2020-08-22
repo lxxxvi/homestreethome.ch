@@ -1,6 +1,7 @@
 class ReleasesExporter
   def as_json
-    Release.published
+    Release.active
+           .published
            .ordered_antichronological
            .map(&method(:serialize))
            .to_json
