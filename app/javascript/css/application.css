@@ -1,6 +1,5 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
-@import "tailwindcss/utilities";
 
 a {
   @apply text-green-600;
@@ -41,3 +40,5 @@ h1 {
     url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBkPSJNMjU2IDE1MmExMDQgMTA0IDAgMSAwIDEwNCAxMDQgMTA0IDEwNCAwIDAgMC0xMDQtMTA0em0wIDEyOGEyNCAyNCAwIDEgMSAyNC0yNCAyNCAyNCAwIDAgMS0yNCAyNHptMC0yNzJDMTE5IDggOCAxMTkgOCAyNTZzMTExIDI0OCAyNDggMjQ4IDI0OC0xMTEgMjQ4LTI0OFMzOTMgOCAyNTYgOHptMCAzNzZhMTI4IDEyOCAwIDEgMSAxMjgtMTI4IDEyOCAxMjggMCAwIDEtMTI4IDEyOHoiLz48L3N2Zz4=")
     no-repeat;
 }
+
+@import "tailwindcss/utilities";
