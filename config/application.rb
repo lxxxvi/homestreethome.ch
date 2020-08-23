@@ -22,7 +22,6 @@ module Homestreethome
     config.load_defaults 6.0
     config.action_view.form_with_generates_remote_forms = false
 
-    config.admin_password = 'default'
     config.discogs = {
       api_token: ENV['DISCOGS_TOKEN'],
       home_street_home_label_id: 827644

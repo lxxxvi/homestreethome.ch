@@ -1,4 +1,4 @@
-class Admin::Discogs::ReleaseForm < ApplicationForm
+class Discogs::ReleaseForm < ApplicationForm
   attr_reader :discogs_release_id
 
   validates :discogs_release_id, presence: true

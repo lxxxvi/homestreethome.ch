@@ -1,21 +1,12 @@
 require 'application_system_test_case'
 
-class Admin::ReleasesTest < ApplicationSystemTestCase
+class ReleasesTest < ApplicationSystemTestCase
   setup do
     @release = releases(:bustin)
   end
 
-  test 'no access without signing in' do
-    visit admin_releases_url
-    assert_selector 'h1', text: 'Releases', count: 0
-    assert_selector 'input[type=submit]' do |element|
-      assert_equal 'Sign in', element[:value]
-    end
-  end
-
   test 'visiting the index' do
-    sign_in
-    visit admin_releases_url
+    visit releases_url
     assert_selector 'h1', text: 'Releases'
   end
 
@@ -23,8 +14,7 @@ class Admin::ReleasesTest < ApplicationSystemTestCase
     discogs_label_releases_stubs
     discogs_release_stub(5835903)
 
-    sign_in
-    visit admin_releases_url
+    visit releases_url
     click_on 'Fetch Release From Discogs'
 
     select 'We Be To Beat What Key Be To Lock', from: 'Discogs Release'
@@ -39,7 +29,7 @@ class Admin::ReleasesTest < ApplicationSystemTestCase
     discogs_label_releases_stubs
     discogs_release_stub(5835903)
 
-    sign_in
+    visit '/'
     click_on 'Fetch Release From Discogs'
 
     fill_in 'Manual Discogs Release ID', with: '5835903'
@@ -51,7 +41,8 @@ class Admin::ReleasesTest < ApplicationSystemTestCase
 
   test 'displays manual discogs release id input field, even if API returns none' do
     discogs_label_no_new_release_stub
-    sign_in
+    visit '/'
+
     click_on 'Fetch Release From Discogs'
 
     assert has_field? 'Manual Discogs Release ID', type: 'text'
@@ -59,8 +50,7 @@ class Admin::ReleasesTest < ApplicationSystemTestCase
   end
 
   test 'updating a Release' do
-    sign_in
-    visit admin_releases_url
+    visit releases_url
     click_on 'Edit', match: :first
 
     fill_in 'Bandcamp URL', with: 'https://label.bandcamp.com/album/cool-music'
@@ -73,8 +63,7 @@ class Admin::ReleasesTest < ApplicationSystemTestCase
   end
 
   test 'archiving a Release' do
-    sign_in
-    visit admin_releases_url
+    visit releases_url
 
     assert_changes -> { find_all('table tbody tr').count }, -1 do
       click_on 'Edit', match: :first

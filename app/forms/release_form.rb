@@ -1,4 +1,4 @@
-class Admin::ReleaseForm < ApplicationForm
+class ReleaseForm < ApplicationForm
   attr_reader :bandcamp_url, :published
 
   def initialize(object, params = {})

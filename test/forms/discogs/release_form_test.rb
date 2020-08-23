@@ -1,17 +1,17 @@
 require 'test_helper'
 
-class Admin::Discogs::ReleaseFormTest < ActiveSupport::TestCase
+class Discogs::ReleaseFormTest < ActiveSupport::TestCase
   test '#save' do
     discogs_release_stub(5835903)
 
-    form = Admin::Discogs::ReleaseForm.new(Release.new, valid_params)
+    form = Discogs::ReleaseForm.new(Release.new, valid_params)
     assert form.save
   end
 
   test 'not home street home release' do
     discogs_release_stub(11223344)
 
-    form = Admin::Discogs::ReleaseForm.new(Release.new, discogs_release_id: 11223344)
+    form = Discogs::ReleaseForm.new(Release.new, discogs_release_id: 11223344)
     assert_not form.valid?
 
     assert_includes form.errors.full_messages_for(:discogs_release_id),
