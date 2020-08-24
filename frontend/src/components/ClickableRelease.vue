@@ -1,14 +1,14 @@
 <template>
   <div>
-    <button @click="$emit('show-release-id-event', releaseId)" >
-      {{ releaseId }}
+    <button @click="$emit('show-release-id-event', release.id)" >
+      {{ release.title }}
     </button>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['releaseId']
+  props: ['release']
 }
 </script>
 

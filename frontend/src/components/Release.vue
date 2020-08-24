@@ -2,12 +2,12 @@
   <div>
     <a @click="$emit('close-release-event')">close</a>
     <h1>Release</h1>
-    {{ releaseId }}
+    {{ release.title }}
   </div>
 </template>
 
 <script>
 export default {
-  props: ['releaseId']
+  props: ['release']
 }
 </script>

@@ -10,11 +10,11 @@
         <span class="inline-block uppercase bg-clip-text text-transparent text-2xl font-bold bg-gradient-to-r from-indigo-700 to-teal-700 tracking-wide">records</span>
       </div>
 
-      <ClickableRelease :release-id="1" v-on="$listeners" />
-      <ClickableRelease :release-id="2" v-on="$listeners" />
-      <ClickableRelease :release-id="3" v-on="$listeners" />
-      <ClickableRelease :release-id="4" v-on="$listeners" />
-      <ClickableRelease :release-id="5" v-on="$listeners" />
+      <ul>
+        <li v-for="release in releases" :key="release.id">
+          <ClickableRelease v-on="$listeners" :release="release" />
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -23,6 +23,7 @@
 import ClickableRelease from './ClickableRelease.vue'
 
 export default {
+  props: ['releases'],
   components: { ClickableRelease }
 }
 </script>

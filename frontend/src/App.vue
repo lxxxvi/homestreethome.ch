@@ -1,7 +1,11 @@
 <template>
   <div id="app">
-    <Index v-if="currentReleaseId === null" @show-release-id-event="showRelease" />
-    <Release v-if="currentReleaseId != null" :release-id="currentReleaseId" @close-release-event="closeRelease" />
+    <Index v-if="currentRelease === null"
+           :releases="allReleases"
+           @show-release-id-event="showRelease" />
+    <Release v-if="currentRelease != null"
+             :release="currentRelease"
+             @close-release-event="closeRelease" />
   </div>
 </template>
 
@@ -13,7 +17,8 @@ export default {
   name: 'App',
   data: () => {
     return {
-      currentReleaseId: null
+      currentRelease: null,
+      allReleases: []
     }
   },
   components: {
@@ -21,11 +26,19 @@ export default {
   },
   methods: {
     showRelease: function(id) {
-      this.currentReleaseId = id;
+      this.currentRelease = this.findRelease(id);
     },
     closeRelease: function() {
-      this.currentReleaseId = null;
+      this.currentRelease = null;
+    },
+    findRelease: function(id) {
+      return this.allReleases.find(release => release.id === id);
     }
+  },
+  mounted: function() {
+    fetch('releases.json')
+      .then(response => response.json())
+      .then(data => { this.allReleases = data })
   }
 }
 </script>
