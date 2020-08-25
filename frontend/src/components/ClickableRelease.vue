@@ -1,8 +1,7 @@
 <template>
-  <div>
-    <button @click="$emit('show-release-id-event', release.id)" >
-      {{ release.title }}
-    </button>
+  <div @click="$emit('show-release-id-event', release.id)" class="clickable mx-2 my-16 p-2 text-center">
+    <img :src="release.image_url" class="w-1/2 mx-auto shadow-2xl rounded" />
+    {{ release.title }}
   </div>
 </template>
 
@@ -13,7 +12,7 @@ export default {
 </script>
 
 <style scoped>
-button {
-  @apply p-5 bg-gray-300;
+.clickable {
+  @apply cursor-pointer;
 }
 </style>

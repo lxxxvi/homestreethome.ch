@@ -1,15 +1,21 @@
 <template>
   <div id="app">
-    <Index v-if="currentRelease === null"
-           :releases="allReleases"
-           @show-release-id-event="showRelease" />
-    <Release v-if="currentRelease != null"
-             :release="currentRelease"
-             @close-release-event="closeRelease" />
+    <div class="background"></div>
+    <div>
+      <Logo />
+      <Index v-if="currentRelease === null"
+             :releases="allReleases"
+             :y-position="yPosition"
+             @show-release-id-event="showRelease" />
+      <Release v-if="currentRelease != null"
+               :release="currentRelease"
+               @close-release-event="closeRelease" />
+    </div>
   </div>
 </template>
 
 <script>
+import Logo from './components/Logo.vue'
 import Index from './components/Index.vue'
 import Release from './components/Release.vue'
 
@@ -18,21 +24,27 @@ export default {
   data: () => {
     return {
       currentRelease: null,
-      allReleases: []
+      allReleases: [],
+      yPosition: 0
     }
   },
   components: {
-    Release, Index
+    Logo, Index, Release
   },
   methods: {
     showRelease: function(id) {
+      this.rememberScrollPosition();
       this.currentRelease = this.findRelease(id);
+      window.scrollTo(0, 0);
     },
     closeRelease: function() {
       this.currentRelease = null;
     },
     findRelease: function(id) {
       return this.allReleases.find(release => release.id === id);
+    },
+    rememberScrollPosition: function() {
+      this.yPosition = window.scrollY;
     }
   },
   mounted: function() {
@@ -42,3 +54,10 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.background {
+  @apply fixed bg-gradient-to-br from-teal-100 to-indigo-200 inset-0;
+  z-index: -1;
+}
+</style>
