@@ -23,6 +23,7 @@ class ReleasesExporter
       released_on: release.released_on,
       tracklist: serialize_tracklist(release.tracklist),
       credits: serialize_credits(release.credits),
+      discogs_url: release.decorate.discogs_url,
       bandcamp_url: release.bandcamp_url
     }
   end

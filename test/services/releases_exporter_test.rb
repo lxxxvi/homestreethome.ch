@@ -27,6 +27,9 @@ class RelesesExporterTest < ActiveSupport::TestCase
 
       assert_equal 1, newest_release['credits'].count
       assert_equal 'Artwork by Irma', newest_release['credits'].first
+
+      assert_equal 'https://www.discogs.com/release/13776867',
+                   newest_release['discogs_url']
     end
 
     # oldest release
@@ -47,6 +50,8 @@ class RelesesExporterTest < ActiveSupport::TestCase
                    oldest_release['tracklist'].last
 
       assert_equal [], oldest_release['credits']
+      assert_equal 'https://www.discogs.com/release/5303073',
+                   newest_release['discogs_url']
     end
   end
   # rubocop:enable Metrics/BlockLength
