@@ -2,7 +2,9 @@
   <div class="text-center">
     <a @click="$emit('close-release-event')"
        class="text-gray-500 my-4 py-4 inline-block w-1/2 cursor-pointer hover:text-indigo-500 transition duration-100 ease-in-out">Back</a>
-    <img :src="release.image_url" class="w-2/3 mx-auto my-8 shadow-2xl" />
+    <img :src="release.image_url"
+         class="w-2/3 mx-auto my-8 shadow-2xl"
+         :alt="imgAltDescription()" />
 
     <div class="mt-4 mb-8">
       <div class="text-gray-700">{{ release.artist }}</div>
@@ -59,7 +61,17 @@ export default {
     },
     exists: function(value) {
       return typeof(value) === "string" && value.length > 0;
+    },
+    imgAltDescription: function() {
+      return `Cover for ${this.release.title}`
     }
   }
 }
 </script>
+
+<style scoped>
+img {
+  max-width: 600px;
+  max-height: 600px;
+}
+</style>

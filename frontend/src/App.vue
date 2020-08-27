@@ -32,16 +32,20 @@ export default {
     Logo, Index, Release
   },
   methods: {
-    showRelease: function(id) {
+    showRelease: async function(id) {
       this.rememberScrollPosition();
-      this.currentRelease = this.findRelease(id);
-      window.scrollTo(0, 0);
+      this.findRelease(id).then((release) => {
+        this.currentRelease = release;
+        window.scrollTo(0, 0);
+      });
     },
     closeRelease: function() {
       this.currentRelease = null;
     },
     findRelease: function(id) {
-      return this.allReleases.find(release => release.id === id);
+      return new Promise((resolve) => {
+        resolve(this.allReleases.find(release => release.id === id));
+      });
     },
     rememberScrollPosition: function() {
       this.yPosition = window.scrollY;
