@@ -1,20 +1,23 @@
 <template>
-  <div @click="$emit('show-release-id-event', release.id)" class="clickable mx-2 my-16 p-2 text-center">
-    <img :src="release.image_url"
-         class="w-1/2 mx-auto shadow-2xl rounded"
-         :alt="imgAltDescription()" />
-    {{ release.title }}
+  <div @click="$emit('show-release-id-event', release.id)" class="sm:w-1/3 clickable mx-2 my-8 p-2 text-center mx-auto">
+    <div class="mx-auto">
+      <CoverImage :release="release"
+                  class-name="shadow-2xl rounded" />
+    </div>
+    <div class="my-4">
+      <div class="text-gray-700 tracking-wide">{{ release.artist }}</div>
+      <div class="text-2xl release-title">{{ release.title }}</div>
+      <div class="text-gray-500">{{ release.released_on }}</div>
+    </div>
   </div>
 </template>
 
 <script>
+import CoverImage from './CoverImage'
+
 export default {
   props: ['release'],
-  methods: {
-    imgAltDescription: function() {
-      return `Cover for ${this.release.title}`
-    }
-  }
+  components: { CoverImage }
 }
 </script>
 
@@ -23,8 +26,7 @@ export default {
   @apply cursor-pointer;
 }
 
-img {
-  max-width: 600px;
-  max-height: 600px;
+.clickable:hover .release-title {
+  @apply underline;
 }
 </style>
