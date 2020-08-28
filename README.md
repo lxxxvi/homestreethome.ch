@@ -56,3 +56,12 @@ This only works if you have your `DISCOGS_TOKEN` configured (see above).
 ```shell
 bin/rails discogs:synchronize
 ```
+
+## Deploy
+
+After managing the releases, the changes can be deployed using this command
+
+```shell
+bin/build_and_deploy
+```
+
