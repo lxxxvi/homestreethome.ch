@@ -34,11 +34,14 @@ Your personal Discogs token can then be obtained [here](https://www.discogs.com/
 export DISCOGS_TOKEN=[...your-token...]
 ```
 
-### Start server
+### Start backend server
 
 ```shell
 bin/rails s
 ```
+
+... then open [http://localhost:300](http://localhost:300) in your browser. Manage the releases here.
+
 
 #### Start webpack-dev-server (optional)
 
@@ -57,6 +60,17 @@ This only works if you have your `DISCOGS_TOKEN` configured (see above).
 bin/rails discogs:synchronize
 ```
 
+## Frontend
+
+1. Export the releases using the rake task `bin/rails export:releases:as_json`. This writes the data to `./frontend/public/releases.json`, where the Frontend App consumes it.
+2. Change to the frontend directory: `cd ./frontend`
+3. Install node packages `yarn install`
+4. Start the server `yarn serve`
+5. Open [http://localhost:8080](http://localhost:8080) in a browser
+
+Note that the frontend only _displays_ data. If there are changes we have to change it in the backend (see above) and then repeat step 1 here.
+
+
 ## Deploy
 
 After managing the releases, the changes can be deployed using this command
@@ -65,3 +79,4 @@ After managing the releases, the changes can be deployed using this command
 bin/build_and_deploy
 ```
 
+In order to deploy you should have corresponding privileges on DockerHub Repository `lxxxvi/homestreethome` and on fly.io.
