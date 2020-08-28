@@ -7,7 +7,7 @@
     <div class="my-4">
       <div class="text-gray-700 tracking-wide">{{ release.artist }}</div>
       <div class="text-2xl release-title">{{ release.title }}</div>
-      <div class="text-gray-500">{{ release.released_on }}</div>
+      <div class="text-gray-700">{{ release.released_on }}</div>
     </div>
   </div>
 </template>
