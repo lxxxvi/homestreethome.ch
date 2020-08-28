@@ -1,0 +1,42 @@
+#!/usr/bin/env ruby
+require 'fileutils'
+require 'pathname'
+include FileUtils
+
+APP_ROOT = Pathname.new(File.expand_path('..', __dir__))
+
+def system!(*args)
+  system(*args) || abort("\n== Command #{args} failed ==")
+end
+
+def say(text)
+  puts "\n.... #{text} ...."
+end
+
+chdir APP_ROOT do
+  say "Export releases"
+  system!("bin/rails export:releases:as_json")
+end
+
+chdir APP_ROOT.join('frontend') do
+  say "Remove ./dist"
+  rm_rf "./dist"
+
+  say "Build frontend"
+  system!("yarn build")
+
+  say "Pull docker image"
+  system!("docker pull lxxxvi/homestreethome")
+
+  say "Build docker image"
+  system!("docker build -t homestreethome -f Dockerfile ./dist")
+
+  say "Tag docker image"
+  system!("docker tag homestreethome lxxxvi/homestreethome")
+
+  say "Push docker image"
+  system!("docker push lxxxvi/homestreethome")
+
+  say "Deploy with flyctl"
+  system!("flyctl deploy")
+end
