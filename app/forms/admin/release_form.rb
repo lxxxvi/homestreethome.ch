@@ -2,6 +2,7 @@ class Admin::ReleaseForm < ApplicationForm
   attr_reader :bandcamp_url, :published
 
   def initialize(object, params = {})
+    super()
     @object = object
     @params = params
 

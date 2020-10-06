@@ -10,7 +10,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma'
 gem 'rails'
 gem 'redcarpet'
-gem 'webpacker', '~> 5.0'
+gem 'webpacker'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]

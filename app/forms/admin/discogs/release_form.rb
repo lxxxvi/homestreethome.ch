@@ -6,6 +6,7 @@ class Admin::Discogs::ReleaseForm < ApplicationForm
   validate :valid_home_street_home_release
 
   def initialize(object, params = {})
+    super()
     @object = object
     @params = params
 

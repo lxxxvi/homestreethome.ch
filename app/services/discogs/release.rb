@@ -9,17 +9,21 @@ class Discogs::Release
     discogs_release_result&.labels&.any? { |label| label.name == HOME_STREET_HOME_RECORDS_NAME }
   end
 
+  # rubocop:disable Metrics/MethodLength
   def to_release
     Release.find_or_initialize_by(discogs_release_id: @discogs_release_id).tap do |release|
-      release.catalog_number = read_catalog_number
-      release.artist = read_artist
-      release.title = read_title
-      release.image_url = read_image_url
-      release.released_on = read_released_on
-      release.tracklist = read_tracklist
-      release.credits = read_credits
+      release.assign_attributes(
+        catalog_number: read_catalog_number,
+        artist: read_artist,
+        title: read_title,
+        image_url: read_image_url,
+        released_on: read_released_on,
+        tracklist: read_tracklist,
+        credits: read_credits
+      )
     end
   end
+  # rubocop:enable Metrics/MethodLength
 
   def discogs_release_result
     @discogs_release_result ||= DISCOGS_WRAPPER.get_release(@discogs_release_id)

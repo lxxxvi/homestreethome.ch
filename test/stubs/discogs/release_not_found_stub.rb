@@ -1,6 +1,7 @@
 module Discogs
   class ReleaseNotFoundStub < BaseStub
     def initialize(discogs_release_id)
+      super()
       @discogs_release_id = discogs_release_id
     end
 

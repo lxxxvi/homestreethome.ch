@@ -1,6 +1,7 @@
 module Discogs
   class LabelNoNewReleaseStub < BaseStub
     def initialize
+      super
       @label_id = Rails.configuration.discogs[:home_street_home_label_id]
     end
 
