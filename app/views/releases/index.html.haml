@@ -4,7 +4,8 @@
       .flex.flex-wrap.p-5.hover:bg-gray-300.cursor-pointer{ data: { url: release_path(release) } }
         .w-full
           .ml-auto.mr-auto.mb-4
-            = image_tag release.image_url, class: 'w-32'
+            - if release.image_url.present?
+              = image_tag release.image_url, class: 'w-32'
           .leading-3.text-sm.text-gray-700
             = release.artist
         .w-full

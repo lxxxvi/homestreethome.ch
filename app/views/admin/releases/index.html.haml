@@ -21,7 +21,8 @@
               %td.px-6.py-4.whitespace-no-wrap.border-b.border-green-200
                 .flex.items-center
                   .flex-shrink-0.h-10.w-10
-                    = image_tag release.image_url, class: 'h-10 w-10'
+                    - if release.image_url.present?
+                      = image_tag release.image_url, class: 'h-10 w-10'
               %td.px-6.py-4.whitespace-no-wrap.border-b.border-green-200
                 .text-sm.leading-5.text-gray-400= release.artist
                 .leading-5
