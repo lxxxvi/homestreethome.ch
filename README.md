@@ -37,15 +37,7 @@ export DISCOGS_TOKEN=[...your-token...]
 ### Start server
 
 ```shell
-bin/rails s
-```
-
-#### Start webpack-dev-server (optional)
-
-To watch and compile JavaScript and CSS changes as the server is running you may want to run `webpack-dev-server` in a **separate** session.
-
-```shel
-bin/webpack-dev-server
+bin/dev
 ```
 
 ### Synchronize Discogs
