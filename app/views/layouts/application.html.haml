@@ -8,8 +8,8 @@
     %title Home Street Home Records
     = csrf_meta_tags
     = csp_meta_tag
-    = stylesheet_pack_tag 'application', media: 'all'
-    = javascript_pack_tag 'application'
+    = stylesheet_link_tag 'application', "data-turbo-track": "reload"
+    = javascript_include_tag 'application', "data-turbo-track": "reload", defer: true
   %body.bg-gray-100
     .ml-auto.mr-auto.bg-gray-200.my-5.md:my-20.p-10.shadow-xl.rounded-lg{ class: 'w-11/12 md:w-1/2' }
       .text-center.font-serif

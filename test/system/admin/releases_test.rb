@@ -6,7 +6,7 @@ class Admin::ReleasesTest < ApplicationSystemTestCase
   end
 
   test 'no access without signing in' do
-    visit admin_releases_url
+    visit admin_releases_path
     assert_selector 'h1', text: 'Releases', count: 0
     assert_selector 'input[type=submit]' do |element|
       assert_equal 'Sign in', element[:value]
@@ -15,7 +15,7 @@ class Admin::ReleasesTest < ApplicationSystemTestCase
 
   test 'visiting the index' do
     sign_in
-    visit admin_releases_url
+    visit admin_releases_path
     assert_selector 'h1', text: 'Releases'
   end
 
@@ -24,7 +24,7 @@ class Admin::ReleasesTest < ApplicationSystemTestCase
     discogs_release_stub(5835903)
 
     sign_in
-    visit admin_releases_url
+    visit admin_releases_path
     click_on 'Fetch Release From Discogs'
 
     select 'We Be To Beat What Key Be To Lock', from: 'Discogs Release'
@@ -60,7 +60,7 @@ class Admin::ReleasesTest < ApplicationSystemTestCase
 
   test 'updating a Release' do
     sign_in
-    visit admin_releases_url
+    visit admin_releases_path
     click_on 'Edit', match: :first
 
     fill_in 'Bandcamp URL', with: 'https://label.bandcamp.com/album/cool-music'
@@ -74,7 +74,7 @@ class Admin::ReleasesTest < ApplicationSystemTestCase
 
   test 'archiving a Release' do
     sign_in
-    visit admin_releases_url
+    visit admin_releases_path
 
     assert_changes -> { find_all('table tbody tr').count }, -1 do
       click_on 'Edit', match: :first

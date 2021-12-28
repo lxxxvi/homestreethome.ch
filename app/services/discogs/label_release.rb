@@ -18,13 +18,13 @@ class Discogs::LabelRelease
 
   def fetch_all
     page = 1
-    result = DISCOGS_WRAPPER.get_label_releases(@label_id, page: page, per_page: 10)
+    result = DISCOGS_WRAPPER.get_label_releases(@label_id, page:, per_page: 10)
 
     releases = result.releases
 
     while page < result.pagination.pages
       page += 1
-      releases += DISCOGS_WRAPPER.get_label_releases(@label_id, page: page, per_page: 10).releases
+      releases += DISCOGS_WRAPPER.get_label_releases(@label_id, page:, per_page: 10).releases
     end
 
     releases
