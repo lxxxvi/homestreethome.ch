@@ -25,10 +25,10 @@ ActiveRecord::Schema.define(version: 2020_04_11_130714) do
     t.text "tracklist", null: false
     t.text "credits"
     t.string "bandcamp_url"
-    t.datetime "published_at", precision: 6
+    t.datetime "published_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.datetime "archived_at", precision: 6
+    t.datetime "archived_at"
     t.index ["catalog_number"], name: "index_releases_on_catalog_number", unique: true
     t.index ["discogs_release_id"], name: "index_releases_on_discogs_release_id", unique: true
   end
