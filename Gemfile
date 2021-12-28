@@ -1,33 +1,33 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.2'
+ruby '3.1.0'
 
-gem 'bootsnap', '>= 1.4.2', require: false
+gem 'bootsnap', require: false
+gem 'cssbundling-rails'
 gem 'discogs-wrapper'
 gem 'haml-rails'
-gem 'pg', '>= 0.18', '< 2.0'
-gem 'puma'
-gem 'rails'
+gem 'jsbundling-rails'
+gem 'pg', '~> 1.1'
+gem 'puma', '~> 5.0'
+gem 'rails', github: 'rails/rails', branch: '7-0-stable'
 gem 'redcarpet'
-gem 'webpacker'
+gem 'sprockets-rails'
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 group :development, :test do
-  gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'rubocop', require: false
   gem 'rubocop-rails', require: false
 end
 
 group :development do
-  gem 'listen'
-  gem 'web-console', '>= 3.3.0'
+  gem 'web-console'
 end
 
 group :test do
-  gem 'capybara', '>= 2.15'
+  gem 'capybara'
   gem 'selenium-webdriver'
   gem 'webdrivers'
   gem 'webmock'
 end
-
-gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

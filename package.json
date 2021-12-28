@@ -1,16 +1,14 @@
 {
-  "name": "homestreethome",
-  "private": true,
+  "name": "app",
+  "private": "true",
   "dependencies": {
-    "@fullhuman/postcss-purgecss": "3.0.0",
-    "@rails/activestorage": "6.0.3-3",
-    "@rails/ujs": "6.0.3-3",
-    "@rails/webpacker": "5.2.1",
-    "stimulus": "1.1.1",
-    "tailwindcss": "1.8.10"
+    "autoprefixer": "^10.4.0",
+    "esbuild": "^0.14.8",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.7"
   },
-  "version": "0.1.0",
-  "devDependencies": {
-    "webpack-dev-server": "3.11.0"
+  "scripts": {
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds",
+    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css"
   }
 }

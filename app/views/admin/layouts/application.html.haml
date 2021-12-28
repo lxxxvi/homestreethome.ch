@@ -5,11 +5,11 @@
     %title HSH Admin
     = csrf_meta_tags
     = csp_meta_tag
-    = stylesheet_pack_tag 'application', media: 'all'
-    = javascript_pack_tag 'application'
+    = stylesheet_link_tag 'application', "data-turbo-track": "reload"
+    = javascript_include_tag 'application', "data-turbo-track": "reload", defer: true
   %body.m-5.bg-gray-100
     - if signed_in?
-      = link_to 'Sign out', admin_sessions_path, method: :delete, class: 'text-gray-500'
+      = button_to 'Sign out', admin_sessions_path, method: :delete, class: 'text-gray-500'
     - if notice.present?
       .text-blue-600{ role: 'alert' }= notice
     = yield
