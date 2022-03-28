@@ -13,7 +13,7 @@ class Admin::ReleasesController < Admin::BaseController
     @form = Admin::ReleaseForm.new(@release, admin_release_params)
 
     if @form.save
-      redirect_to edit_admin_release_path(@form.object), notice: 'Release was successfully updated.'
+      redirect_to edit_admin_release_path(@form.object), notice: t('.success')
     else
       render :edit
     end
@@ -21,7 +21,7 @@ class Admin::ReleasesController < Admin::BaseController
 
   def destroy
     @release.archive!
-    redirect_to admin_releases_url, notice: 'Release was successfully archived.'
+    redirect_to admin_releases_url, notice: t('.success')
   end
 
   private

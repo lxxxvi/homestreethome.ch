@@ -5,7 +5,7 @@ class Admin::BaseController < ApplicationController
   def authenticate
     return if helpers.signed_in?
 
-    redirect_to new_admin_sessions_path, notice: 'Please login first'
+    redirect_to new_admin_sessions_path, notice: t('admin.base.authenticate.success')
   end
 
   private
