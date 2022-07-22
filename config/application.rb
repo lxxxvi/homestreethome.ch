@@ -32,7 +32,7 @@ module Homestreethome
     # config.eager_load_paths << Rails.root.join("extras")
     config.admin_password = 'default'
     config.discogs = {
-      api_token: ENV['DISCOGS_TOKEN'],
+      api_token: ENV.fetch('DISCOGS_TOKEN', nil),
       home_street_home_label_id: 827644
     }
   end

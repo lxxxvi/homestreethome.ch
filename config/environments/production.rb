@@ -1,7 +1,7 @@
 require 'active_support/core_ext/integer/time'
 
 Rails.application.configure do
-  config.admin_password = ENV['HOMESTREETHOME_ADMIN_PASSWORD']
+  config.admin_password = ENV.fetch('HOMESTREETHOME_ADMIN_PASSWORD')
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
