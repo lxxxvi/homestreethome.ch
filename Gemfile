@@ -1,16 +1,16 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.1.1'
+ruby '3.1.2'
 
 gem 'bootsnap', require: false
 gem 'cssbundling-rails'
 gem 'discogs-wrapper'
 gem 'haml-rails'
 gem 'jsbundling-rails'
-gem 'pg', '~> 1.1'
-gem 'puma', '~> 5.0'
-gem 'rails', github: 'rails/rails', branch: '7-0-stable'
+gem 'pg'
+gem 'puma'
+gem 'rails'
 gem 'redcarpet'
 gem 'sprockets-rails'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
