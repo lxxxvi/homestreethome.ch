@@ -4,14 +4,12 @@
     {% render "head", metadata: site.metadata, title: resource.data.title %}
   </head>
   <body class="{{ resource.data.layout }} {{ resource.data.page_class }}">
-    <div class="flex">
-      <div class="sm:max-w-md p-5 rounded-xl">
-        {% render "header" %}
-        <main class="my-10 bg-gray-200 p-5 rounded-lg">
-          {{ content }}
-        </main>
-        {% render "footer" %}
-      </div>
+    <div class="container mx-auto sm:max-w-md p-5">
+      {% render "header" %}
+      <main class="my-10 bg-gray-200 p-5 rounded-lg">
+        {{ content }}
+      </main>
+      {% render "footer" %}
     </div>
   </body>
 </html>
