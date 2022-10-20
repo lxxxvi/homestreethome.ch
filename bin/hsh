@@ -1,0 +1,69 @@
+#!/usr/bin/env ruby
+
+require "discogs"
+
+DISCOGS_WRAPPER_APP_NAME = "HSH".freeze
+DISCOGS_WRAPPER = Discogs::Wrapper.new(DISCOGS_WRAPPER_APP_NAME, user_token: ENV.fetch("DISCOGS_TOKEN"))
+HOME_STREET_HOME_LABEL_ID = 827644
+
+release_id = ARGV[0]
+
+raise "Please provide a release ID" if release_id.nil?
+
+discogs_release = DISCOGS_WRAPPER.get_release(release_id)
+
+raise "Given release ID is not a HSH release" if discogs_release["labels"].first["id"] != HOME_STREET_HOME_LABEL_ID
+
+def sanitize_artist_name(artist_name)
+  artist_name.gsub(%r{ \(\d+\)$}, '')
+end
+
+def extract_and_join_artists(artists)
+  artists.map { [sanitize_artist_name(_1.name), _1[:join]] }
+        .flatten
+        .reject { _1 == "" }
+        .join(" ")
+end
+
+def build_track_name(track)
+  return track.title if track.artists.nil?
+
+  "#{extract_and_join_artists(track.artists)} - #{track.title}"
+end
+
+catalog_number = discogs_release.labels.first.catno
+released_on = discogs_release.released
+order = released_on
+artist = extract_and_join_artists(discogs_release.artists)
+
+title = discogs_release.title
+cover_url = discogs_release.images.first.resource_url
+tracklist = discogs_release.tracklist.map { { "name" => build_track_name(_1), "position" => _1.position  }}
+discogs_release_url = discogs_release.uri
+
+release_hash = {
+  "layout" => "release",
+  "order" => order,
+  "release" => {
+    "catalog_number" => catalog_number,
+    "released_on" => released_on,
+    "artist" => artist,
+    "title" => title,
+    "cover_url" => cover_url,
+    "tracklist" => tracklist,
+    "links" => [
+      {
+        "text" => "Discogs",
+        "url" => discogs_release_url
+      }
+    ]
+  }
+}
+
+release_yaml = YAML.dump(release_hash)
+release_yaml << "---\n"
+
+output_path = Pathname.new("src/_releases/#{catalog_number.upcase}.md")
+output_path.write(release_yaml)
+
+puts "File written: #{output_path}"
