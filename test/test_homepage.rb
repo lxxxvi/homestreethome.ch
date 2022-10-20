@@ -38,6 +38,11 @@ class TestHomepage < Minitest::Test
       assert_select "section#tracklist" do
         assert_select "li", count: 20
       end
+
+      assert_select "section#links" do
+        assert_select "a", "Discogs"
+        assert_select "a", "Bandcamp"
+      end
     end
   end
 end
