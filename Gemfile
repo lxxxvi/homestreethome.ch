@@ -32,3 +32,12 @@ gem "bridgetown", "~> 1.1.0"
 # (you can optionally limit this to the "development" group)
 gem "puma"
 gem "discogs-wrapper"
+
+group :test, optional: true do
+  gem "nokogiri"
+  gem "minitest"
+  gem "minitest-profile"
+  gem "minitest-reporters"
+  gem "shoulda"
+  gem "rails-dom-testing"
+end

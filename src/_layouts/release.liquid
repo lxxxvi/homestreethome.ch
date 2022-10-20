@@ -15,31 +15,35 @@ layout: default
 
   <img src="{{ release.cover_url }}" alt="Cover for {{ release.artist }} - {{ release.title }}" class="rounded-xl" />
 
-  <div class="flex flex-col gap-y-1">
-    <h1 class="text-xl text-gray-400">{{ release.artist }}</h1>
-    <h2 class="text-2xl">{{ release.title }}</h2>
-    <time datetime="{{ release.released_on }}" class="text-sm text-gray-400">{{ release.released_on }}</time>
-  </div>
+  <section id="general">
+    <div class="flex flex-col gap-y-1">
+      <h1 class="text-xl text-gray-400">{{ release.artist }}</h1>
+      <h2 class="text-2xl">{{ release.title }}</h2>
+      <time datetime="{{ release.released_on }}" class="text-sm text-gray-400">{{ release.released_on }}</time>
+    </div>
+  </section>
 
-  <div class="flex flex-col gap-y-2">
-    <h2 class="text-gray-600 text-sm uppercase">Tracklist</h2>
+  <section id="tracklist">
+    <div class="flex flex-col gap-y-2">
+      <h2 class="text-gray-600 text-sm uppercase">Tracklist</h2>
+      <ul>
+        {% for track in release.tracklist %}
+          <li class="text-sm font-mono text-gray-700">{{ track.position }} - {{ track.name }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
 
-    <ul>
-      {% for track in release.tracklist %}
-        <li class="text-sm font-mono text-gray-700">{{ track.position }} - {{ track.name }}</li>
-      {% endfor %}
-    </ul>
-  </div>
-
-  <div class="flex flex-col gap-y-2">
-    <h2 class="text-gray-600 text-sm uppercase">Links</h2>
-
-    <ul>
-      {% for link in release.links %}
-        <li>
-          <a href="{{ link.url }}" target="_blank" class="text-green-600 opacity-70 hover:opacity-100 transition">{{ link.text }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
+  <section id="links">
+    <div class="flex flex-col gap-y-2">
+      <h2 class="text-gray-600 text-sm uppercase">Links</h2>
+      <ul>
+        {% for link in release.links %}
+          <li>
+            <a href="{{ link.url }}" target="_blank" class="text-green-600 opacity-70 hover:opacity-100 transition">{{ link.text }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
 </div>
