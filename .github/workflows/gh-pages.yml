@@ -1,12 +1,16 @@
-name: Deploy to GitHub pages
+env:
+  NODE_VERSION: '16'
+
+name: Continuous Integration
 
 on:
   push:
     branches:
-      - main
+      - 'main'  # Set a branch to deploy
+  pull_request:
 
 jobs:
-  deploy:
+  continuous_integration:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -19,15 +23,29 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
-          node-version: "16"
+          node-version: ${{ env.NODE_VERSION }}
           cache: "yarn"
-      - run: yarn install
+
+      - name: Install node packages
+        run: yarn install
+
+      - name: bundle install --with test
+        run: bundle install --with test
+
+      - name: Test
+        run: bin/bridgetown test
 
       - name: Build
+        if: github.ref == 'refs/heads/main'
         run: bin/bridgetown deploy
+
+      - name: Copy CNAME
+        if: github.ref == 'refs/heads/main'
+        run: cp ./CNAME ./dist/
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./output
+          publish_dir: ./dist
