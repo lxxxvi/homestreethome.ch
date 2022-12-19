@@ -2,14 +2,17 @@
 layout: releases
 ---
 
+{% assign all_resources = collections.releases.resources | sort: 'order' | reverse %}
+{% assign latest_resource = all_resources | first %}
+{% assign other_resurces = all_resources | slice: 1, all_resources.size %}
+
 <div class="flex flex-col gap-y-10">
   <div class="w-full flex flex-col gap-y-2">
     <h2 class="text-gray-500 text-xs uppercase">Latest release</h2>
 
-    {% assign resource = collections.releases.resources[0] %}
-    {% assign release = resource.release %}
+    {% assign release = latest_resource.release %}
 
-    <a href="{{ resource.relative_url }}" class="opacity-80 hover:opacity-100 transition flex flex-col gap-y-2">
+    <a href="{{ latest_resource.relative_url }}" class="opacity-80 hover:opacity-100 transition flex flex-col gap-y-2">
       <img src="{{ release.cover_url }}" alt="Cover for {{ release.artist }} - {{ release.title }}" class="rounded-xl" />
       <div class="px-2 flex flex-col gap-y-1">
         <span class="text-md text-gray-600 tracking-wider">{{ release.released_on }}</span>
@@ -23,7 +26,7 @@ layout: releases
     <h2 class="text-gray-500 text-xs uppercase">Previous releases</h2>
 
     <ul class="grid grid-cols-2 gap-5">
-      {% for resource in collections.releases.resources offset:1 %}
+      {% for resource in other_resurces %}
         {% assign release = resource.release %}
         <li>
           <a href="{{ resource.relative_url }}" class="opacity-80 hover:opacity-100 transition flex flex-col gap-y-1">

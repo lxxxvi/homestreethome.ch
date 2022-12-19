@@ -12,6 +12,9 @@ bin/hsh [discogs-release-id]
 # running locally
 bin/bridgetown start
 
+# tests
+bin/bridgetown test
+
 # build & deploy to production
 bin/bridgetown deploy
 
