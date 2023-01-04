@@ -13,7 +13,7 @@ bin/hsh [discogs-release-id]
 bin/bridgetown start
 
 # tests
-bin/bridgetown test
+bin/test
 
 # build & deploy to production
 bin/bridgetown deploy
